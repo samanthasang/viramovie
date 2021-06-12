@@ -9,85 +9,144 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-    <!-- <link type="text/css" rel="stylesheet" href="css/hover-min.css">
+    <link type="text/css" rel="stylesheet" href="css/hover-min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/0.9.3/hamburgers.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/swiper-bundle.css">
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
-    <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet"> -->
+    <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
     <link href="images/LogoTop.svg" rel="icon">
     <link href="images/LogoTop.svg" rel="apple-touch-icon">
 </head>
 
 <body>
     <!-- navbar -->
-    <nav class="navbar fixed-top">
+    <nav class="fixed-top">
         <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="#">صفحه اصلی </a>
+            <li>
+                <a href="#">صفحه اصلی </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">فیلم </a>
+            <li>
+                <a href="#">فیلم </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">سریال </a>
+            <li>
+                <a href="#">سریال </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">دسته بندی </a>
+            <li>
+                <a href="#">دسته بندی </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">برترینها </a>
+            <li>
+                <a href="#">برترینها </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">چهره های مشهور </a>
+            <li>
+                <a href="#">چهره های مشهور </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">تریلر ها </a>
+            <li>
+                <a href="#">تریلر ها </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">چهره های مشهور </a>
+            <li>
+                <a href="#">چهره های مشهور </a>
             </li>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">لاگین </a>
+            <li>
+                <a href="#">لاگین </a>
             </li>
         </ul>
     </nav>
-    <!-- slider -->
-    <section class="slideshow">
-        <div class="col-sm-2"></div>
-        <div class="col-sm-5 poster-info">
-            <h2>GAIRLS OF THE SUN 2018 </h2><br><br>
-            <p>این فیلم داستان فردی را به تصویر می‌کشد که هدایت گروهی از جنجویان محلی را بر عهده دارد و در برابر داعش ایستادگی می‌کنند تا شهرشان را آزاد کنند. او امیدوار است تا در طول عملیات‌ها پسرش که توسط داعش گروگان گرفته شده است را پیدا کند. در این میان
-                یک خبرنگار فرانسوی نیز به گروه آنها می‌پیوندد تا در طول عملیات از نبردها عکس‌برداری کند و…</p>
-            <br>
-            <ul class="film-Score">
-                <li> <img src="img/shape/circle.png" alt=""></li>
-                <li> <img src="img/shape/circle.png" alt=""></li>
-                <li> <img src="img/shape/circle.png" alt=""></li>
-            </ul>
-            <ul class="film-Score-title">
-                <li> <span>کیفیت</span></li>
-                <li> <span>امتیاز</span></li>
-                <li> <span>سال</span></li>
-            </ul>
-            <br><br><br>
-            <ul class="film-btn">
-                <li><button class="btn-link">تماشا</button></li>
-                <li><button class="btn-link">دانلود</button></li>
-            </ul>
-            <br><br><br>
-            <ul class="film-thumbnail">
-                <li><img src="img/images/let us prey.jpg" alt=""></li>
-                <li><img src="img/images/Secrets of Sulphur Springs.jpg" alt=""></li>
-                <li><img src="img/images/The Mosquito Coast.jpg" alt=""></li>
-            </ul>
+    <!-- swiper -->
+    <div class="swiper-container mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="col-sm-5 poster-img">
+                    <img src="img/images/gairlsofthesun.jpg" alt="">
+                </div>
+                <div class="col-sm-5 poster-info">
+                    <h2>GAIRLS OF THE SUN 2018 </h2><br><br>
+                    <p>این فیلم داستان فردی را به تصویر می‌کشد که هدایت گروهی از جنجویان محلی را بر عهده دارد و در برابر داعش ایستادگی می‌کنند تا شهرشان را آزاد کنند. او امیدوار است تا در طول عملیات‌ها پسرش که توسط داعش گروگان گرفته شده است را پیدا کند.
+                        در این میان یک خبرنگار فرانسوی نیز به گروه آنها می‌پیوندد تا در طول عملیات از نبردها عکس‌برداری کند و…</p>
+                    <br>
+                    <ul class="film-Score">
+                        <li>HD</li>
+                        <li>6.2</li>
+                        <li>2016</li>
+                    </ul>
+                    <ul class="film-Score-title">
+                        <li> <span>کیفیت</span></li>
+                        <li> <span>امتیاز</span></li>
+                        <li> <span>سال</span></li>
+                    </ul>
+                    <br><br><br>
+                    <ul class="film-btn">
+                        <li><button class="btn-link">تماشا</button></li>
+                        <li><button class="btn-link">دانلود</button></li>
+                    </ul>
+                    <br><br><br>
+
+                </div>
+
+            </div>
+            <div class="swiper-slide">
+                <div class="col-sm-5 poster-img">
+                    <img src="img/images/gairlsofthesun.jpg" alt="">
+                </div>
+                <div class="col-sm-5 poster-info">
+                    <h2>GAIRLS OF THE SUN 2018 </h2><br><br>
+                    <p>این فیلم داستان فردی را به تصویر می‌کشد که هدایت گروهی از جنجویان محلی را بر عهده دارد و در برابر داعش ایستادگی می‌کنند تا شهرشان را آزاد کنند. او امیدوار است تا در طول عملیات‌ها پسرش که توسط داعش گروگان گرفته شده است را پیدا کند.
+                        در این میان یک خبرنگار فرانسوی نیز به گروه آنها می‌پیوندد تا در طول عملیات از نبردها عکس‌برداری کند و…</p>
+                    <br>
+                    <ul class="film-Score">
+                        <li>HD</li>
+                        <li>6.2</li>
+                        <li>2016</li>
+                    </ul>
+                    <ul class="film-Score-title">
+                        <li> <span>کیفیت</span></li>
+                        <li> <span>امتیاز</span></li>
+                        <li> <span>سال</span></li>
+                    </ul>
+                    <br><br><br>
+                    <ul class="film-btn">
+                        <li><button class="btn-link">تماشا</button></li>
+                        <li><button class="btn-link">دانلود</button></li>
+                    </ul>
+                    <br><br><br>
+
+                </div>
+
+            </div>
+            <div class="swiper-slide">
+                <div class="col-sm-5 poster-img">
+                    <img src="img/images/gairlsofthesun.jpg" alt="">
+                </div>
+                <div class="col-sm-5 poster-info">
+                    <h2>GAIRLS OF THE SUN 2018 </h2><br><br>
+                    <p>این فیلم داستان فردی را به تصویر می‌کشد که هدایت گروهی از جنجویان محلی را بر عهده دارد و در برابر داعش ایستادگی می‌کنند تا شهرشان را آزاد کنند. او امیدوار است تا در طول عملیات‌ها پسرش که توسط داعش گروگان گرفته شده است را پیدا کند.
+                        در این میان یک خبرنگار فرانسوی نیز به گروه آنها می‌پیوندد تا در طول عملیات از نبردها عکس‌برداری کند و…</p>
+                    <br>
+                    <ul class="film-Score">
+                        <li>HD</li>
+                        <li>6.2</li>
+                        <li>2016</li>
+                    </ul>
+                    <ul class="film-Score-title">
+                        <li> <span>کیفیت</span></li>
+                        <li> <span>امتیاز</span></li>
+                        <li> <span>سال</span></li>
+                    </ul>
+                    <br><br><br>
+                    <ul class="film-btn">
+                        <li><button class="btn-link">تماشا</button></li>
+                        <li><button class="btn-link">دانلود</button></li>
+                    </ul>
+                    <br><br><br>
+
+                </div>
+
+            </div>
         </div>
-        <div class="col-sm-5 poster-img">
-            <img src="img/images/gairlsofthesun.jpg" alt="">
-        </div>
-    </section><br><br><br><br>
+        <div class="swiper-pagination"></div>
+    </div>
     <!-- advanced search -->
-    <section class="advanced-search">
+    <div class="advanced-search">
         <form>
             <div class="inner-form">
                 <div class="input-field first-wrap">
@@ -112,10 +171,9 @@
                 </div>
             </div>
         </form>
-    </section>
-    <br><br><br><br><br>
+    </div>
     <!-- CATEGORY  -->
-    <section>
+    <div>
         <div class="tab">
             <button class="tablinks" onclick="openTab(event, 'Newest')" id="defaultOpen">جدیدترین</button>
             <button class="tablinks" onclick="openTab(event, 'Special')">ویژه</button>
@@ -408,12 +466,14 @@
                 </div>
             </div>
         </div>
-    </section>
-    <section> <br><br> <br><br> <br><br>
-    </section>
+    </div>
 
-
-
+    <!-- last trailer -->
+    <div class="col-lg-12 last_trailer">
+        <div class="col-lg-5 trailer_box"></div>
+        <div class="col-lg-7 trailer_box"></div>
+    </div>
+    </div>
 
 
 
@@ -461,11 +521,25 @@
             tablinks[i].className = tablinks[i].className.replace(" active", "");
         }
         document.getElementById(cityName).style.display = "block";
-        evt.currentTarget.className += " active";
+        evt.currentTarget.className += "active";
     }
 
     // Get the element with id="defaultOpen" and click on it
     document.getElementById("defaultOpen").click();
+</script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        direction: "vertical",
+        slidesPerView: 1,
+        spaceBetween: 30,
+        mousewheel: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
 </script>
 
 </html>

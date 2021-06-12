@@ -273,11 +273,19 @@ p {
     height: 100px;
 }
 
+.fixed-top {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030
+}
+
 
 /* navbar */
 
 nav {
     width: 100%;
+    background: #e1e1e1;
 }
 
 nav ul {
@@ -290,7 +298,32 @@ nav ul {
 }
 
 
-/* slider */
+/* swiper */
+
+.swiper-container {
+    width: 100%;
+    height: 700px;
+    margin-bottom: 20px;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #e3e3e3;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
 
 .poster-img {
     float: right;
@@ -316,14 +349,25 @@ nav ul {
     font-size: 24px;
 }
 
+.film-Score {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 0;
+}
+
 .film-Score li,
 .film-Score-title li {
     display: inline;
-    margin-left: 10px;
+}
+
+.film-Score li {
+    background: #c5c5c5;
+    padding: 10px;
+    border-radius: 25px;
+    margin-left: 25px;
 }
 
 .film-Score-title li {
-    display: inline;
     margin-left: 35px;
 }
 
@@ -371,11 +415,12 @@ nav ul {
 /* advanced search */
 
 .advanced-search {
-    width: 100%;
+    width: 100% !important;
+    margin-bottom: 60px;
 }
 
 .advanced-search form {
-    width: 80%;
+    width: 95%;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -384,11 +429,13 @@ nav ul {
 .advanced-search form .inner-form .input-field .input-select select {
     height: 80px !important;
     width: 150px;
+    padding: 0 10px;
     background: #c4c4c4;
     color: #222;
     border: none;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+    cursor: pointer;
 }
 
 .advanced-search form .inner-form {
@@ -565,4 +612,16 @@ nav ul {
 .movie-title {
     text-align: center;
     margin: 10px;
+}
+
+
+/* last trailer */
+
+.last_trailer {
+    margin-left: auto;
+    margin-right: auto;
+    height: 400px;
+    background: #fff;
+    border-radius: 16px;
+    margin: 50px 0;
 }
