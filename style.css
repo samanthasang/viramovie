@@ -129,6 +129,12 @@
      font-size: 100%;
      vertical-align: baseline;
      background: transparent;
+     text-decoration: none!important;
+     transition: .2s ease-out;
+     -webkit-transition: .2s ease-out;
+     -moz-transition: .2s ease-out;
+     -o-transition: .2s ease-out;
+     color: #000 !important;
  }
  /* change colours to suit your needs */
  
@@ -183,14 +189,6 @@
      font-family: 'ir_sans_b', sans-serif !important;
  }
  
- a {
-     text-decoration: none!important;
-     transition: .2s ease-out;
-     -webkit-transition: .2s ease-out;
-     -moz-transition: .2s ease-out;
-     -o-transition: .2s ease-out;
- }
- 
  li {
      list-style: none;
  }
@@ -222,6 +220,10 @@
  .rtl {
      direction: rtl;
  }
+ 
+ .brd {
+     border-left: 3px solid #e1e1e1;
+ }
  /* ------***----------- */
  
  *,
@@ -232,15 +234,6 @@
  
  body {
      overflow: scroll;
-     background: #fcfdff;
- }
- 
- .p0 {
-     padding: 0px!important;
- }
- 
- a {
-     color: #000 !important;
  }
  
  p {
@@ -253,8 +246,7 @@
  .row {
      margin: 0 0;
  }
- /* ----------------------------------------------------------------------- */
- /* test css */
+ /************************* test css *************************/
  
  .test-1 {
      background: seagreen;
@@ -294,7 +286,7 @@
      background-color: #8A00D4;
      color: #fff;
  }
- /* swiper */
+ /************************* swiper *************************/
  
  .swiper-container {
      width: 100%;
@@ -413,6 +405,7 @@
      color: #000;
      background: #e3e3e3;
      border: 1px solid #8a00d4;
+     text-decoration: none;
  }
  
  .film-thumbnail li {
@@ -425,7 +418,7 @@
      height: 100px;
      border-radius: 5px;
  }
- /* advanced search */
+ /************************* advanced search *************************/
  
  .advanced-search {
      width: 100% !important;
@@ -566,7 +559,7 @@
          width: 100%;
      }
  }
- /* CATEGORY */
+ /************************* CATEGORY *************************/
  
  .tab {
      overflow: hidden;
@@ -605,7 +598,7 @@
  
  .move-box {
      width: 100%;
-     height: 400px;
+     height: 700px;
      background: #fff;
      border-radius: 16px;
      margin-top: 50px;
@@ -620,11 +613,31 @@
      border-radius: 16px;
  }
  
+ .move-box p {
+     padding: 15px;
+ }
+ 
+ .move-box button {
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+ }
+ 
+ .move-box ul {
+     display: flex;
+     justify-content: space-around;
+ }
+ 
+ .move-box ul li {
+     display: inline-block;
+     margin-bottom: 20px;
+ }
+ 
  .movie-title {
      text-align: center;
      margin: 10px;
  }
- /* last trailer */
+ /************************ last trailer **********************/
  
  .trailer_box {
      display: inline-block;
@@ -686,12 +699,34 @@
  .vertical_list a img {
      width: 150px;
      height: 55px;
+     margin-left: 10px;
  }
  
  .vertical_list a:hover {
      background: #8a00d4;
+     color: #fff !important;
  }
  
  .vertical_list a:focus {
      background: #8a00d4;
+     color: #fff !important;
+ }
+ /**********  last news ***********/
+ 
+ .news_box {
+     display: flex;
+     margin: 5px;
+ }
+ 
+ .news_box img {
+     width: 300px;
+     height: 350px;
+ }
+ 
+ .news {
+     height: 400px;
+     background: #fff;
+     border-radius: 5px;
+     margin-top: 50px;
+     padding-top: 15px;
  }
