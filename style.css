@@ -287,6 +287,7 @@ p {
 
 .fixed_top {
     position: fixed;
+    top: 0;
     right: 0;
     left: 0;
     z-index: 1030
@@ -701,7 +702,8 @@ nav ul {
     left: 20px;
 }
 
-.tr_title li select {
+.tr_title li select,
+.season_num li select {
     border: none;
     background: none;
 }
@@ -810,14 +812,28 @@ footer {
 /************ movie page  ******************/
 
 .movie_panel,
-.download_panel {
-    display: inline-flex;
+.download_panel,
+.comment_panel {
+    display: flex;
     justify-content: flex-start;
     width: 100%;
     height: 500px;
     background: #444;
     border-radius: 15px;
     margin-bottom: 30px;
+}
+
+.Actors_panel {
+    width: 100%;
+    height: 500px;
+    background: #444;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+.comment_panel {
+    justify-content: center;
+    padding: 30px;
 }
 
 .panel_tape {
@@ -834,7 +850,7 @@ footer {
     height: 40px;
     border-radius: 50%;
     background: #e0e0e0;
-    margin: 30px;
+    margin: 30px 5px;
 }
 
 .t_score {
@@ -843,7 +859,9 @@ footer {
 }
 
 .t_title {
-    margin: -25px 30px;
+    display: flex;
+    justify-content: center;
+    margin: -25px;
 }
 
 .t_num {
@@ -882,4 +900,298 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+}
+
+.dropdown {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    direction: rtl;
+    height: 28px;
+    width: 100px;
+}
+
+.dropdown:before,
+.dropdown:after {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    top: 9px;
+    left: 10px;
+    width: 0;
+    height: 0;
+    border: 4px dashed;
+    border-color: #fff transparent;
+    pointer-events: none;
+}
+
+.dropdown:before {
+    border-bottom-style: solid;
+    border-top: none;
+}
+
+.dropdown:after {
+    margin-top: 7px;
+    border-top-style: solid;
+    border-bottom: none;
+}
+
+.dropdown-select {
+    position: relative;
+    width: 130%;
+    margin: 0;
+    padding: 6px 8px 6px 10px;
+    height: 28px;
+    line-height: 14px;
+    font-size: 12px;
+    color: #fff;
+    text-shadow: 0 1px white;
+    /* Fallback for IE 8 */
+    background: none !important;
+    /* "transparent" doesn't work with Opera */
+    border: 0;
+    border-radius: 0;
+    -webkit-appearance: none;
+}
+
+.dropdown-select:focus {
+    z-index: 3;
+    width: 100%;
+    color: #000;
+}
+
+.dropdown-select>option {
+    margin: 3px;
+    padding: 6px 8px;
+    text-shadow: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+
+/* Dirty fix for Firefox adding padding where it shouldn't. */
+
+@-moz-document url-prefix() {
+    .dropdown-select {
+        padding-left: 6px;
+    }
+}
+
+
+/* download table */
+
+.table tr {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    height: 70px;
+}
+
+.table td {
+    border-top: none !important;
+    margin-left: 150px;
+}
+
+.table td .Quality_box {
+    display: flex;
+}
+
+.row_1 {
+    display: flex;
+    width: 100%;
+}
+
+.row_2 {
+    display: flex;
+    width: 100%;
+}
+
+.chip {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0 25px;
+    height: 200px;
+    width: 100%;
+    font-size: 16px;
+    line-height: 50px;
+}
+
+.chip img {
+    width: 120px;
+    height: 120px;
+    float: right;
+    margin: 20px;
+    border-radius: 50%;
+}
+
+.chip a {
+    color: #fff !important;
+}
+
+
+/* contact form */
+
+.contact100-form {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 68px;
+}
+
+.contact100-form-title {
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    color: #fff;
+    text-align: right;
+    padding: 30px 0;
+}
+
+.wrap-input100 {
+    width: 100%;
+    position: relative;
+    border-bottom: 2px solid #d9d9d9;
+    padding-bottom: 0;
+    margin-bottom: 65px;
+}
+
+.rs1-wrap-input100 {
+    width: calc((100% - 30px) / 2);
+}
+
+.label-input100 {
+    font-size: 15px;
+    color: #fff;
+    line-height: 1.5;
+    padding-left: 5px;
+}
+
+.input100 {
+    display: block;
+    width: 100%;
+    background: none;
+    font-size: 18px;
+    padding: 0 5px;
+}
+
+.focus-input100 {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.focus-input100::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+    background: #ff4b5a;
+}
+
+input.input100 {
+    height: 40px;
+}
+
+textarea.input100 {
+    min-height: 110px;
+    padding-top: 9px;
+    padding-bottom: 13px;
+}
+
+.input100:focus+.focus-input100::before {
+    width: 100%;
+}
+
+.has-val.input100+.focus-input100::before {
+    width: 100%;
+}
+
+.container-contact100-form-btn {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: -25px;
+}
+
+.contact100-form-btn {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    min-width: 160px;
+    height: 50px;
+    background-color: #ff4b5a;
+    border-radius: 25px;
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.2;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+    box-shadow: 0 10px 30px 0px rgba(255, 75, 90, 0.5);
+    -moz-box-shadow: 0 10px 30px 0px rgba(255, 75, 90, 0.5);
+    -webkit-box-shadow: 0 10px 30px 0px rgba(255, 75, 90, 0.5);
+    -o-box-shadow: 0 10px 30px 0px rgba(255, 75, 90, 0.5);
+    -ms-box-shadow: 0 10px 30px 0px rgba(255, 75, 90, 0.5);
+}
+
+.contact100-form-btn i {
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+.contact100-form-btn:hover {
+    background-color: #333333;
+    box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5);
+    -moz-box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5);
+    -webkit-box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5);
+    -o-box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5);
+    -ms-box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5);
+}
+
+.contact100-form-btn:hover i {
+    -webkit-transform: translateX(10px);
+    -moz-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    -o-transform: translateX(10px);
+    transform: translateX(10px);
+}
+
+@media (max-width: 768px) {
+    .rs1-wrap-input100 {
+        width: 100%;
+    }
+}
+
+.validate-input {
+    position: relative;
 }
