@@ -1230,3 +1230,56 @@ textarea.input100 {
 .validate-input {
     position: relative;
 }
+
+
+/************ dashboard ************/
+
+.dashboard {
+    display: flex;
+    height: 1300px;
+    background: #333333;
+    padding: 0;
+    border-radius: 5px;
+}
+
+.dash_btn {
+    background: #fff;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 0;
+}
+
+.dash_btn ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 100px;
+    margin-right: 20px;
+}
+
+.dash_btn ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+}
+
+.dash_btn ul li:hover {
+    background: #333333;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.dash_btn ul li a {
+    color: #000;
+}
+
+.dash_btn ul li:hover a {
+    color: #fff !important;
+}
+
+
+/* .dash_pan {} */

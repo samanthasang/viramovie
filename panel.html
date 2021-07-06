@@ -1,0 +1,338 @@
+<!doctype html>
+
+<head>
+    <!-- Required meta tags -->
+    <title>movie</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link type="text/css" rel="stylesheet" href="css/hover-min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/0.9.3/hamburgers.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/swiper-bundle.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+    <link href="images/LogoTop.svg" rel="icon">
+    <link href="images/LogoTop.svg" rel="apple-touch-icon">
+    <link href="css/main.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <div class="container">
+        <!-- navbar -->
+        <nav class="fixed_top Light_gray">
+            <ul class="navbar_nav">
+                <li>
+                    <a href="#">صفحه اصلی </a>
+                </li>
+                <li>
+                    <a href="#">فیلم </a>
+                </li>
+                <li>
+                    <a href="#">سریال </a>
+                </li>
+                <li>
+                    <a href="#">دسته بندی </a>
+                </li>
+                <li>
+                    <a href="#">برترینها </a>
+                </li>
+                <li>
+                    <a href="#">چهره های مشهور </a>
+                </li>
+                <li>
+                    <a href="#">تریلر ها </a>
+                </li>
+            </ul>
+            <ul class="left_list">
+                <li><a href="#"><i class="fa fa-user"></i></a></li>
+            </ul>
+        </nav>
+        <!-- swiper -->
+        <div class="swiper_container mySwiper">
+            <div class="swiper_wrapper">
+                <div class="swiper_slide">
+                    <div class="col-sm-5 poster_img">
+                        <img src="img/images/gairlsofthesun.jpg" alt="">
+                    </div>
+                    <div class="col-sm-7 poster_info">
+                        <h2>GAIRLS OF THE SUN 2018 </h2>
+                        <p>این فیلم داستان فردی را به تصویر می‌کشد که هدایت گروهی از جنجویان محلی را بر عهده دارد و در برابر داعش ایستادگی می‌کنند تا شهرشان را آزاد کنند. او امیدوار است تا در طول عملیات‌ها پسرش که توسط داعش گروگان گرفته شده است را پیدا کند.
+                            در این میان یک خبرنگار فرانسوی نیز به گروه آنها می‌پیوندد تا در طول عملیات از نبردها عکس‌برداری کند و…</p>
+
+                        <div class="score">
+                            <span class="circle">HD</span>
+                            <span class="circle">6.2</span>
+                            <span class="circle">2016</span>
+                        </div>
+                        <div class="score_title">
+                            <span class="title">کیفیت</span>
+                            <span class="title">امتیاز</span>
+                            <span class="title">سال</span>
+                        </div>
+                        <div class="film_btn">
+                            <a class="btn_link">تماشا</a>
+                            <a class="btn_link">دانلود</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <!-- advanced search -->
+        <div class="advanced_search">
+            <form>
+                <div class="inner_form">
+                    <div class="input_field">
+                        <div class="input_select">
+                            <select data-trigger="" name="choices_single_defaul">
+                            <option placeholder="">سریال</option>
+                            <option>سینمایی</option>
+                            <option>انیمه </option>
+                            <option>انیمیشن</option>
+                        </select>
+                        </div>
+                    </div>
+                    <div class="input_field second_wrap">
+                        <input id="search" type="text" placeholder="نام فیلم، سریال، انیمه، انیمیشن مورد نظر را وارد کنید" onfocus="this.placeholder=''" onblur="this.placeholder='نام فیلم، سریال، انیمه، انیمیشن مورد نظر را وارد کنید'" />
+                    </div>
+                    <div class="input_field third_wrap">
+                        <button id="myBtn" class="btn_search" type="button">جستجوی پیشرفته
+                    <svg class="svg-inline-fa fa-search fa-w-16" aria-hidden="true" data-prefix="fas" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+                    </svg>
+                  </button>
+                    </div>
+                </div>
+            </form>
+            <!-- modal advanced search -->
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+                <!-- Modal content -->
+                <div class="s007">
+                    <form>
+                        <div class="inner-form">
+                            <div class="basic-search">
+                                <div class="input-field">
+                                    <div class="icon-wrap">
+                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+                                  <path d="M18.869 19.162l-5.943-6.484c1.339-1.401 2.075-3.233 2.075-5.178 0-2.003-0.78-3.887-2.197-5.303s-3.3-2.197-5.303-2.197-3.887 0.78-5.303 2.197-2.197 3.3-2.197 5.303 0.78 3.887 2.197 5.303 3.3 2.197 5.303 2.197c1.726 0 3.362-0.579 4.688-1.645l5.943 6.483c0.099 0.108 0.233 0.162 0.369 0.162 0.121 0 0.242-0.043 0.338-0.131 0.204-0.187 0.217-0.503 0.031-0.706zM1 7.5c0-3.584 2.916-6.5 6.5-6.5s6.5 2.916 6.5 6.5-2.916 6.5-6.5 6.5-6.5-2.916-6.5-6.5z"></path>
+                                </svg>
+                                    </div>
+                                    <span class="close">&times;</span>
+
+                                    <input id="search" type="text" placeholder="Search..." />
+                                    <div class="result-count">
+                                        <span>108 </span></div>
+                                </div>
+                            </div>
+                            <div class="advance-search">
+                                <span class="desc">Advanced Search</span>
+                                <div class="row">
+                                    <div class="input-field">
+                                        <div class="input-select">
+                                            <select data-trigger="" name="choices-single-defaul">
+                                    <option placeholder="" value="">ACCESSORIES</option>
+                                    <option>ACCESSORIES</option>
+                                    <option>SUBJECT B</option>
+                                    <option>SUBJECT C</option>
+                                  </select>
+                                        </div>
+                                    </div>
+                                    <div class="input-field">
+                                        <div class="input-select">
+                                            <select data-trigger="" name="choices-single-defaul">
+                                    <option placeholder="" value="">COLOR</option>
+                                    <option>GREEN</option>
+                                    <option>SUBJECT B</option>
+                                    <option>SUBJECT C</option>
+                                  </select>
+                                        </div>
+                                    </div>
+                                    <div class="input-field">
+                                        <div class="input-select">
+                                            <select data-trigger="" name="choices-single-defaul">
+                                    <option placeholder="" value="">SIZE</option>
+                                    <option>SIZE</option>
+                                    <option>SUBJECT B</option>
+                                    <option>SUBJECT C</option>
+                                  </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row second">
+                                    <div class="input-field">
+                                        <div class="input-select">
+                                            <select data-trigger="" name="choices-single-defaul">
+                                    <option placeholder="" value="">SALE</option>
+                                    <option>SALE</option>
+                                    <option>SUBJECT B</option>
+                                    <option>SUBJECT C</option>
+                                  </select>
+                                        </div>
+                                    </div>
+                                    <div class="input-field">
+                                        <div class="input-select">
+                                            <select data-trigger="" name="choices-single-defaul">
+                                    <option placeholder="" value="">TIME</option>
+                                    <option>THIS WEEK</option>
+                                    <option>SUBJECT B</option>
+                                    <option>SUBJECT C</option>
+                                  </select>
+                                        </div>
+                                    </div>
+                                    <div class="input-field">
+                                        <div class="input-select">
+                                            <select data-trigger="" name="choices-single-defaul">
+                                    <option placeholder="" value="">TYPE</option>
+                                    <option>TYPE</option>
+                                    <option>SUBJECT B</option>
+                                    <option>SUBJECT C</option>
+                                  </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row third">
+                                    <div class="input-field">
+                                        <button class="btn-search">Search</button>
+                                        <button class="btn-delete" id="delete">Delete</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="col-lg-12 dashboard">
+            <div class="col-lg-3 dash_btn">
+                <ul>
+                    <li><a href="#home">وضعیت اشتراک</a></li>
+                    <li><a href="#news">آخرین نظرات من</a></li>
+                    <li><a href="#contact">لیست تماشا</a></li>
+                    <li><a href="#about">اطلاع رسانی ها</a></li>
+                    <li><a href="#about">عناوین مورد علاقه</a></li>
+                    <li><a href="#about">درخواست فیلم و سریال</a></li>
+                    <li><a href="#about">درخواست زیرنویس</a></li>
+                    <li><a href="#home">نقد های کاربران</a></li>
+                    <li><a href="#home">ویرایش حساب کاربری</a></li>
+                    <li><a href="#home">آپلود عکس پروفایل</a></li>
+                    <li><a href="#home">خروج از حساب</a></li>
+
+                </ul>
+
+            </div>
+            <div class="col-lg-9 dash_pan"></div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer">
+            <ul class="f_tabs">
+                <li><a href="#">درباره ما</a></li>
+                <li><a href="#">تماس با ما</a></li>
+                <li><a href="#">قوانین</a></li>
+                <li><a href="#">داشتن اشتراک ویژه</a></li>
+            </ul>
+            <p>تمامی محصولات این سایت، حسب مورد دارای مجوز لازم از مراجع ذیصلاح می باشند و فعالیت های این سایت تابع قوانین و مقررات جمهوری اسلامی ایران است</p>
+        </div>
+    </footer>
+</body>
+<!-- jQuery , JS -->
+<script src=" js/jquery.min.js "></script>
+<script src="js/bootstrap.min.js "></script>
+<script src="js/swiper-bundle.js "></script>
+<script src="js/swiper-bundle.min.js "></script>
+<script>
+    function openTab(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += "active";
+    }
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+    //  Initialize Swiper 
+    var swiper = new Swiper(".mySwiper", {
+        direction: "horizontal",
+        slidesPerView: 1,
+        spaceBetween: 30,
+        mousewheel: true,
+        pagination: {
+            el: ".swiper_pagination",
+            clickable: true,
+        },
+    });
+</script>
+<!-- modal -->
+<script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+<script src="js/choices.js"></script>
+<script>
+    const customSelects = document.querySelectorAll("select");
+    const deleteBtn = document.getElementById('delete')
+    const choices = new Choices('select', {
+        searchEnabled: false,
+        removeItemButton: true,
+        itemSelectText: '',
+    });
+    for (let i = 0; i < customSelects.length; i++) {
+        customSelects[i].addEventListener('addItem', function(event) {
+            if (event.detail.value) {
+                let parent = this.parentNode.parentNode
+                parent.classList.add('valid')
+                parent.classList.remove('invalid')
+            } else {
+                let parent = this.parentNode.parentNode
+                parent.classList.add('invalid')
+                parent.classList.remove('valid')
+            }
+        }, false);
+    }
+    deleteBtn.addEventListener("click", function(e) {
+        e.preventDefault()
+        const deleteAll = document.querySelectorAll('.choices__button')
+        for (let i = 0; i < deleteAll.length; i++) {
+            deleteAll[i].click();
+        }
+    });
+</script>
+
+</html>
