@@ -414,7 +414,7 @@ nav ul {
 .btn_link {
     font-weight: bold;
     font-size: 12px;
-    color: #fff;
+    color: #fff !important;
     text-decoration: none;
     background: #8a00d4;
     border-radius: 5px;
@@ -424,7 +424,7 @@ nav ul {
 }
 
 .btn_link:hover {
-    color: #000;
+    color: #8a00d4 !important;
     background: #fff;
     border: 1px solid #8a00d4;
     text-decoration: none;
@@ -875,7 +875,7 @@ footer {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    background: #f80;
+    background: #EB8307;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
 }
@@ -1263,7 +1263,7 @@ textarea.input100 {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100px;
+    height: 80px;
     width: 100%;
 }
 
@@ -1281,5 +1281,106 @@ textarea.input100 {
     color: #fff !important;
 }
 
+.dash_pan {
+    padding: 50px;
+}
 
-/* .dash_pan {} */
+.dash_pan span {
+    color: #fff;
+}
+
+.btn_group {
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    margin: 60px 0;
+    background: #fff;
+    border-radius: 15px;
+}
+
+.btn_group button {
+    border-radius: 15px;
+    border: none;
+    background: #fff;
+}
+
+.btn_group button:hover,
+.btn_group button:focus {
+    border-radius: 15px;
+    background: #EB8307;
+}
+
+.btn-block {
+    margin: 0 !important;
+}
+
+.Subscription_box {
+    background: #fff;
+    border-radius: 15px;
+    height: 350px;
+    padding: 50px;
+    margin: 50px;
+}
+
+.Subscription_type {
+    height: 200px;
+    width: 200px;
+    background: #EB8307;
+    border-radius: 15px;
+    padding: 50px;
+}
+
+.Subscription_type span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.Subscription_option {
+    min-height: 200px;
+}
+
+.Subscription_option img {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 0;
+}
+
+.buy_btn {
+    float: left;
+    margin-top: 20px;
+}
+
+.Comments_box {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 15px;
+    height: 150px;
+    padding: 20px;
+    margin: 50px;
+}
+
+.Comments_box .buy_btn {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.Comments_box span {
+    color: #000;
+}
+
+.c_date {
+    float: right;
+}
+
+.c_like {
+    float: left;
+}
+
+.c_like img {
+    width: 30px;
+    height: 30px;
+}
