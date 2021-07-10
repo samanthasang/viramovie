@@ -136,7 +136,6 @@ a {
     -webkit-transition: .2s ease-out;
     -moz-transition: .2s ease-out;
     -o-transition: .2s ease-out;
-    color: #000 !important;
 }
 
 
@@ -191,7 +190,7 @@ select {
 }
 
 body {
-    background: #e1e1e1!important;
+    background: #1e1e1e!important;
     direction: rtl;
     line-height: 1;
     font-family: 'ir_sans_b', sans-serif !important;
@@ -249,7 +248,6 @@ body {
 p {
     font-weight: 300;
     line-height: 1.7em;
-    color: #000;
     text-align: justify;
 }
 
@@ -267,23 +265,21 @@ p {
 
 /************************* color css *************************/
 
-.Purple {
-    background: #8a00d4;
-    color: #eee;
-}
-
 .Light_gray {
     background: #e1e1e1;
     color: #1e1e1e;
 }
 
-.dark_gray {
-    background: #a5a5a5;
+.dark {
+    background: #1e1e1e;
     color: #1e1e1e;
 }
 
 
 /************************* navbar *************************/
+
+
+/* fixed_nav */
 
 .fixed_top {
     position: fixed;
@@ -294,7 +290,34 @@ p {
 }
 
 
-/* navbar */
+/* end fixed_nav */
+
+
+/* me_btn */
+
+.me_btn {
+    height: 50px;
+    background: #EB8307;
+    padding: 15px 30px;
+    color: #000;
+    border-radius: 5px;
+}
+
+.me_btn:hover {
+    background: transparent;
+    border: 2px solid #EB8307;
+}
+
+.me_btn a {
+    color: #1e1e1e;
+}
+
+.me_btn:hover a {
+    color: #EB8307;
+}
+
+
+/* end me_btn */
 
 nav {
     width: 100%;
@@ -305,22 +328,34 @@ nav ul {
 }
 
 .navbar_nav li {
-    float: right;
+    display: inline-flex;
     padding: 25px;
     cursor: pointer;
 }
 
+.navbar_nav li a {
+    color: #888 !important;
+}
+
 .navbar_nav li:hover {
-    background-color: #8A00D4;
+    background-color: #EB8307;
     color: #fff !important;
 }
 
+.navbar_nav li:hover a {
+    background-color: #EB8307;
+    color: #1e1e1e !important;
+}
+
 .left_list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
     position: absolute;
     left: 30px;
     height: 70px;
     width: 50px;
-    background: lightcoral;
 }
 
 .left_list li {
@@ -344,7 +379,7 @@ nav ul {
 
 .swiper_slide {
     font-size: 18px;
-    background: #e3e3e3;
+    background: #1e1e1e;
     /* Center slide text vertically */
     display: -webkit-box;
     display: -ms-flexbox;
@@ -361,24 +396,22 @@ nav ul {
 }
 
 .poster_img {
-    display: block;
-    top: 50px;
-    right: 0;
-    float: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .poster_img img {
-    display: block;
-    margin-right: 15px;
     width: 430px;
-    height: 560px;
+    height: auto;
 }
 
 .poster_info {
     display: flex;
     flex-direction: column;
-    align-content: flex-start;
-    top: -50px;
+    align-items: flex-start;
+    color: #fff;
 }
 
 .poster_info h2 {
@@ -388,16 +421,35 @@ nav ul {
     margin-bottom: 40px;
 }
 
-.circle {
-    height: 50px;
-    width: 50px;
-    background-color: #a5a5a5;
-    border-radius: 50%;
+.score_box {
+    display: inline-flex;
+    margin: 20px 0;
 }
 
-.score {
-    margin-top: 30px;
-    margin-bottom: 10px;
+.circle {
+    display: inline;
+    height: 50px;
+    width: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 15px;
+    margin-left: 15px;
+    position: relative;
+}
+
+.score_value {
+    position: absolute;
+    top: 222px;
+    right: 23px;
+    color: #000;
+}
+
+.score_value span {
+    margin-left: 37px;
+}
+
+.score_title span {
+    margin-left: 30px;
 }
 
 .film_btn {
@@ -408,7 +460,12 @@ nav ul {
 
 .film_btn a {
     display: inline;
-    padding: 8px 40px;
+    padding: 8px 50px;
+    margin-left: 15px;
+}
+
+.film_btn a:hover {
+    color: #EB8307;
 }
 
 .btn_link {
@@ -434,23 +491,16 @@ nav ul {
 /************************* advanced search *************************/
 
 .advanced_search {
-    width: 100% !important;
     margin-bottom: 60px;
-    margin-top: 50px;
 }
 
-.advanced_search form {
-    width: 95%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.input_select select {
+.input_select {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     height: 80px !important;
-    width: 150px;
-    padding: 0 10px;
-    background: #c4c4c4;
+    width: 200px;
+    background: #fff;
     color: #222;
     border: none;
     border-top-right-radius: 5px;
@@ -459,15 +509,12 @@ nav ul {
 }
 
 .inner_form {
-    background: #fff;
+    background: #333333;
     display: -ms-flexbox;
     display: flex;
-    width: 100%;
     -ms-flex-pack: justify;
-    justify-content: space-between;
     -ms-flex-align: center;
-    align-items: center;
-    border-radius: 3px;
+    border-radius: 5px;
 }
 
 .input_field {
@@ -525,7 +572,7 @@ nav ul {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     cursor: pointer;
-    background: #8a00d4;
+    background: #EB8307;
     transition: all .2s ease-out, color .2s ease-out;
 }
 
@@ -534,7 +581,9 @@ nav ul {
 }
 
 .btn_search:hover {
-    background: #8a00d4;
+    background: #1e1e1e;
+    border: 1px solid #EB8307;
+    color: #EB8307;
 }
 
 .btn_search:focus {
@@ -1236,7 +1285,7 @@ textarea.input100 {
 
 .dashboard {
     display: flex;
-    height: 1300px;
+    height: 2000px;
     background: #333333;
     padding: 0;
     border-radius: 5px;
@@ -1289,6 +1338,9 @@ textarea.input100 {
     color: #fff;
 }
 
+
+/************ btn-group ************/
+
 .btn_group {
     display: flex;
     justify-content: center;
@@ -1313,6 +1365,9 @@ textarea.input100 {
 .btn-block {
     margin: 0 !important;
 }
+
+
+/************ Subscription ************/
 
 .Subscription_box {
     background: #fff;
@@ -1353,6 +1408,9 @@ textarea.input100 {
     margin-top: 20px;
 }
 
+
+/************ Comments ************/
+
 .Comments_box {
     display: flex;
     flex-direction: column;
@@ -1383,4 +1441,74 @@ textarea.input100 {
 .c_like img {
     width: 30px;
     height: 30px;
+}
+
+
+/************ Watchlist ************/
+
+.Watchlist {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Watchlist_box {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    background: #fff;
+    border-radius: 15px;
+    height: 300px;
+    width: 100%;
+    padding: 20px;
+    margin: 20px 50px;
+}
+
+.Watchlist_box span {
+    color: #000;
+    font-weight: bold;
+}
+
+.Watchlist_box ul li {
+    margin: 10px 0;
+}
+
+.Watchlist_box.inner_form {
+    width: 100%;
+}
+
+.Watchlist_box a {
+    color: #EB8307 !important;
+}
+
+.Watchlist_box img {
+    height: 250px;
+    width: auto;
+}
+
+.Watchlist_box .buy_btn {
+    display: block;
+}
+
+.Notifications_box {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 15px;
+    height: 300px;
+    padding: 20px;
+    margin: 50px;
+}
+
+.Notifications_box span {
+    color: #000;
+}
+
+.m_s_box {
+    background: #fff;
+    border-radius: 15px;
+    height: 150px;
+    padding: 20px;
+    margin: 50px;
 }
