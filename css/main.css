@@ -165,9 +165,12 @@
 }
 
 .choices__list--single {
-    display: inline-block;
+    display: flex;
+    align-items: center;
     padding: 4px 16px 4px 4px;
     width: 100%;
+    height: 63px;
+    direction: rtl;
 }
 
 [dir="rtl"] .choices__list--single {
@@ -254,6 +257,7 @@
     overflow: auto;
     -webkit-overflow-scrolling: touch;
     will-change: scroll-position;
+    direction: rtl;
 }
 
 .choices__list--dropdown .choices__item {
@@ -268,7 +272,7 @@
 
 @media (min-width: 640px) {
     .choices__list--dropdown .choices__item--selectable {
-        padding-right: 100px;
+        padding-right: 10px;
     }
     .choices__list--dropdown .choices__item--selectable:after {
         content: attr(data-select-text);
@@ -399,15 +403,14 @@
 .s007 form .inner-form .input-field input {
     height: 100%;
     border: 0;
-    background: #fff;
+    background: #242424;
     display: block;
     width: 100%;
     padding: 10px 32px 10px 70px;
     font-size: 18px;
-    color: #666;
+    color: #eb8307;
     border-radius: 3px;
     height: 70px;
-    color: #555;
 }
 
 .s007 form .inner-form .input-field input.placeholder {
@@ -435,11 +438,11 @@
     min-width: 100px;
     height: 40px;
     padding: 0 15px;
-    background: #57b846;
+    background: #eb8307;
     white-space: nowrap;
     border-radius: 3px;
     font-size: 14px;
-    color: #fff;
+    color: #141414;
     transition: all .2s ease-out, color .2s ease-out;
     border: 0;
     cursor: pointer;
@@ -447,7 +450,9 @@
 }
 
 .s007 form .inner-form .input-field .btn-search:hover {
-    background: #4ea63f;
+    border: 1px solid #eb8307;
+    background: transparent;
+    color: #eb8307;
 }
 
 .s007 form .inner-form .input-field .btn-delete {
@@ -466,7 +471,7 @@
 }
 
 .s007 form .inner-form .input-field .btn-delete:hover {
-    color: #000;
+    color: #eb8307;
 }
 
 .s007 form .inner-form .basic-search {
@@ -499,34 +504,13 @@
 .s007 form .inner-form .basic-search .input-field .icon-wrap svg {
     width: 34px;
     height: 34px;
-    margin: auto;
     fill: #ccc;
-}
-
-.s007 form .inner-form .basic-search .input-field .result-count {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: start;
-    justify-content: center;
-    -ms-flex-align: center;
-    align-items: center;
-    width: 110px;
-    top: 0;
-    right: 10px;
-    position: absolute;
-    font-weight: bold;
-    color: #555;
-    height: 100%;
-    font-size: 14px;
-}
-
-.s007 form .inner-form .basic-search .input-field .result-count span {
-    color: #57b846;
-    padding-right: 5px;
+    margin-top: 30px;
+    margin-left: 20px;
 }
 
 .s007 form .inner-form .advance-search {
-    background: #fff;
+    background: #141414;
     padding: 40px;
     border-radius: 3px;
     box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
@@ -534,7 +518,7 @@
 
 .s007 form .inner-form .advance-search .desc {
     font-size: 15px;
-    color: #999;
+    color: #eb8307;
     display: block;
     margin-bottom: 26px;
 }
@@ -569,7 +553,7 @@
     background: transparent;
     border-radius: 0;
     border: 0;
-    border-bottom: 2px solid #ccc;
+    border-bottom: 2px solid #eb8307;
     height: 100%;
     color: #fff;
     display: -ms-flexbox;
@@ -612,7 +596,7 @@
 
 .s007 form .inner-form .advance-search .choices__list.choices__list--dropdown {
     border: 0;
-    background: #fff;
+    background: #242424;
     padding: 20px 30px;
     margin-top: 2px;
     border-radius: 4px;
@@ -624,8 +608,7 @@
 }
 
 .s007 form .inner-form .advance-search .choices__list--dropdown .choices__item--selectable.is-highlighted {
-    background: #fff;
-    color: #57b846;
+    color: #eb8307;
 }
 
 .s007 form .inner-form .advance-search .choices__list--dropdown .choices__item {
