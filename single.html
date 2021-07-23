@@ -9,6 +9,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style2.css">
     <link type="text/css" rel="stylesheet" href="css/hover-min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/0.9.3/hamburgers.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/swiper-bundle.css">
@@ -16,37 +18,28 @@
     <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
     <link href="images/LogoTop.svg" rel="icon">
     <link href="images/LogoTop.svg" rel="apple-touch-icon">
+    <link href="css/main.css" rel="stylesheet" />
+
 </head>
 
 <body>
     <div class="container">
         <!-- navbar -->
-        <nav class="fixed_top Light_gray">
-            <ul class="navbar_nav">
-                <li>
-                    <a href="#">صفحه اصلی </a>
-                </li>
-                <li>
-                    <a href="#">فیلم </a>
-                </li>
-                <li>
-                    <a href="#">سریال </a>
-                </li>
-                <li>
-                    <a href="#">دسته بندی </a>
-                </li>
-                <li>
-                    <a href="#">برترینها </a>
-                </li>
-                <li>
-                    <a href="#">چهره های مشهور </a>
-                </li>
-                <li>
-                    <a href="#">تریلر ها </a>
-                </li>
+        <nav class="fixed_top chinese_black">
+            <ul class="navbar_nav right">
+                <li><a href="#">صفحه اصلی </a></li>
+                <li><a href="#">فیلم </a></li>
+                <li><a href="#">سریال </a></li>
+                <li><a href="#">دسته بندی </a></li>
+                <li><a href="#">برترینها </a></li>
+                <li><a href="#">چهره های مشهور </a></li>
+                <li><a href="#">تریلر ها </a></li>
             </ul>
-            <ul class="left_list">
-                <li><a href="#"><i class="fa fa-user"></i></a></li>
+            <ul class="left">
+                <li class="me_btn"><a href="#">ثبت نام | ورود</a></li>
+                <li>
+                    <a href="#"><img src="img/logo.png" alt=""></a>
+                </li>
             </ul>
         </nav>
         <!-- swiper -->
@@ -59,22 +52,29 @@
                     <div class="col-sm-7 poster_info">
                         <h2>GAIRLS OF THE SUN 2018 </h2>
                         <p>این فیلم داستان فردی را به تصویر می‌کشد که هدایت گروهی از جنجویان محلی را بر عهده دارد و در برابر داعش ایستادگی می‌کنند تا شهرشان را آزاد کنند. او امیدوار است تا در طول عملیات‌ها پسرش که توسط داعش گروگان گرفته شده است را پیدا کند.
-                            در این میان یک خبرنگار فرانسوی نیز به گروه آنها می‌پیوندد تا در طول عملیات از نبردها عکس‌برداری کند و…</p>
+                            در این میان یک خبرنگار فرانسوی نیز به گروه آنها می‌پیوندد تا در طول عملیات از نبردها عکس‌ برداری کند و…</p>
 
-                        <div class="score">
-                            <span class="circle">HD</span>
-                            <span class="circle">6.2</span>
-                            <span class="circle">2016</span>
+                        <div class="score_box">
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
                         </div>
-                        <div class="score_title">
-                            <span class="title">کیفیت</span>
-                            <span class="title">امتیاز</span>
-                            <span class="title">سال</span>
+                        <div class="score_value">
+                            <span>HD</span>
+                            <span>6.2</span>
+                            <span>2016</span>
                         </div>
-                        <div class="film_btn">
-                            <a class="btn_link">تماشا</a>
-                            <a class="btn_link">دانلود</a>
+                        <div class="score_title ">
+                            <span>کیفیت</span>
+                            <span>امتیاز</span>
+                            <span>سال</span>
                         </div>
+
+                        <ul class="poster_btn">
+                            <li class="me_btn"><a href="#">تماشا</a></li>
+                            <li class="me_btn"><a href="#">دانلود</a></li>
+                        </ul>
+
                     </div>
                 </div>
 
@@ -84,29 +84,128 @@
         <!-- advanced search -->
         <div class="advanced_search">
             <form>
-                <div class="inner_form">
-                    <div class="input_field">
+                <div class="inner_form ">
+                    <div class="input_field ">
                         <div class="input_select">
-                            <select data-trigger="" name="choices_single_defaul">
-                            <option placeholder="">سریال</option>
-                            <option>سینمایی</option>
-                            <option>انیمه </option>
-                            <option>انیمیشن</option>
-                        </select>
+                            <select data-trigger=" " name="choices_single_defaul ">
+                                <option placeholder=" ">سریال</option>
+                                <option>سینمایی</option>
+                                <option>انیمه </option>
+                                <option>انیمیشن</option>
+                            </select>
                         </div>
                     </div>
-                    <div class="input_field second_wrap">
-                        <input id="search" type="text" placeholder="نام فیلم، سریال، انیمه، انیمیشن مورد نظر را وارد کنید" onfocus="this.placeholder=''" onblur="this.placeholder='نام فیلم، سریال، انیمه، انیمیشن مورد نظر را وارد کنید'" />
+                    <div class="input_field second_wrap ">
+                        <input id="search " type="text " placeholder="نام فیلم، سریال، انیمه، انیمیشن مورد نظر را وارد کنید " onfocus="this.placeholder='' " onblur="this.placeholder='نام فیلم، سریال، انیمه، انیمیشن مورد نظر را وارد کنید' " />
                     </div>
-                    <div class="input_field third_wrap">
-                        <button class="btn_search" type="button">جستجوی پیشرفته
-                    <svg class="svg-inline-fa fa-search fa-w-16" aria-hidden="true" data-prefix="fas" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                      <path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+                    <div class="input_field third_wrap ">
+                        <button id="myBtn" class="btn_search" type="button">جستجوی پیشرفته
+                    <svg class="svg-inline-fa fa-search fa-w-16 " aria-hidden="true " data-prefix="fas " data-icon="search " role="img " xmlns="http://www.w3.org/2000/svg " viewBox="0 0 512 512 ">
+                      <path fill="currentColor " d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4
+                        33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z "></path>
                     </svg>
                   </button>
                     </div>
                 </div>
             </form>
+            <!-- modal advanced search -->
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+                <!-- Modal content -->
+                <div class="s007">
+                    <form>
+                        <div class="inner-form">
+                            <div class="basic-search">
+                                <div class="input-field">
+                                    <div class="icon-wrap">
+                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+                                  <path d="M18.869 19.162l-5.943-6.484c1.339-1.401 2.075-3.233 2.075-5.178 0-2.003-0.78-3.887-2.197-5.303s-3.3-2.197-5.303-2.197-3.887 0.78-5.303 2.197-2.197 3.3-2.197 5.303 0.78 3.887 2.197 5.303 3.3 2.197 5.303 2.197c1.726 0 3.362-0.579 4.688-1.645l5.943 6.483c0.099 0.108 0.233 0.162 0.369 0.162 0.121 0 0.242-0.043 0.338-0.131 0.204-0.187 0.217-0.503 0.031-0.706zM1 7.5c0-3.584 2.916-6.5 6.5-6.5s6.5 2.916 6.5 6.5-2.916 6.5-6.5 6.5-6.5-2.916-6.5-6.5z"></path>
+                                </svg>
+                                    </div>
+                                    <span class="close">&times;</span>
+
+                                    <input id="search" type="text" placeholder="Search..." />
+                                </div>
+                            </div>
+                            <div class="advance-search">
+                                <span class="desc">Advanced Search</span>
+                                <div class="row">
+                                    <div class="input-field">
+                                        <div class="input-select">
+                                            <select data-trigger="" name="choices-single-defaul">
+                                    <option placeholder="" value="">ACCESSORIES</option>
+                                    <option>ACCESSORIES</option>
+                                    <option>SUBJECT B</option>
+                                    <option>SUBJECT C</option>
+                                  </select>
+                                        </div>
+                                    </div>
+                                    <div class="input-field">
+                                        <div class="input-select">
+                                            <select data-trigger="" name="choices-single-defaul">
+                                    <option placeholder="" value="">COLOR</option>
+                                    <option>GREEN</option>
+                                    <option>SUBJECT B</option>
+                                    <option>SUBJECT C</option>
+                                  </select>
+                                        </div>
+                                    </div>
+                                    <div class="input-field">
+                                        <div class="input-select">
+                                            <select data-trigger="" name="choices-single-defaul">
+                                    <option placeholder="" value="">SIZE</option>
+                                    <option>SIZE</option>
+                                    <option>SUBJECT B</option>
+                                    <option>SUBJECT C</option>
+                                  </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row second">
+                                    <div class="input-field">
+                                        <div class="input-select">
+                                            <select data-trigger="" name="choices-single-defaul">
+                                    <option placeholder="" value="">SALE</option>
+                                    <option>SALE</option>
+                                    <option>SUBJECT B</option>
+                                    <option>SUBJECT C</option>
+                                  </select>
+                                        </div>
+                                    </div>
+                                    <div class="input-field">
+                                        <div class="input-select">
+                                            <select data-trigger="" name="choices-single-defaul">
+                                    <option placeholder="" value="">TIME</option>
+                                    <option>THIS WEEK</option>
+                                    <option>SUBJECT B</option>
+                                    <option>SUBJECT C</option>
+                                  </select>
+                                        </div>
+                                    </div>
+                                    <div class="input-field">
+                                        <div class="input-select">
+                                            <select data-trigger="" name="choices-single-defaul">
+                                    <option placeholder="" value="">TYPE</option>
+                                    <option>TYPE</option>
+                                    <option>SUBJECT B</option>
+                                    <option>SUBJECT C</option>
+                                  </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row third">
+                                    <div class="input-field">
+                                        <button class="btn-search">Search</button>
+                                        <button class="btn-delete" id="delete">Delete</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
         </div>
         <!-- movie panel -->
         <div class="movie_panel">
@@ -116,16 +215,16 @@
                         <span>دانلود سریال ginny and georgia</span>
                     </div>
                     <div class="col-lg-6 top_panel fl ltr">
-                        <a href="#"><img src="img/svg/bookmark_icon.svg" alt=""></a>
+                        <a href="#"><img src="img/svg/bookmark.svg" alt=""></a>
                         <a href="#"><img src="img/svg/bell.svg" alt=""></a>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-4 panel_img">
-                        <img src="img/images/cherry.jpg" alt="">
+                        <img src="img/images/cherry-sm.jpg" alt="">
                     </div>
                     <div class="col-lg-8 panel_sub">
-                        <div class="col-lg-6 p_s_">
+                        <div class="col-lg-6 p_s">
                             <p> <span>زبان:</span>
                                 <a href="#">انگلیسی</a>
                             </p>
@@ -138,7 +237,7 @@
                                 <a href="#">59 دقیقه</a>
                             </p>
                         </div>
-                        <div class="col-lg-6 p_s_">
+                        <div class="col-lg-6 p_s">
                             <p><span>ژانر:</span>
                                 <a href="#">درام</a>
                             </p>
@@ -151,7 +250,7 @@
                                 <a href="#">MA_TV</a>
                             </p>
                         </div>
-                        <div class="col-lg-12 p_s_">
+                        <div class="col-lg-12 p_s">
                             <p>
                                 <span>ستارگان:</span>
                                 <a href="#">brad pitt</a>,
@@ -166,6 +265,9 @@
                         </div>
                     </div>
                 </div>
+                <p class="download_links">
+                    <a href="#">»» لینک های دانلود ««</a>
+                </p>
             </div>
             <div class="col-lg-1 panel_tape">
                 <div>
@@ -203,76 +305,100 @@
                 <div class="col-lg-12">
                     <table class="table">
                         <tr>
-                            <td>دانلود قسمت اول سریال ginny and georgia
-                            </td>
+                            <td>دانلود قسمت اول سریال ginny and georgia</td>
                             <td>
-                                <ul class="Quality_box">
-                                    <li class="t_circle"></li>
-                                    <li class="t_circle"></li>
-                                    <li class="t_circle"></li>
-                                </ul>
+                                <div class="score_box">
+                                    <div class="circle_2"></div>
+                                    <div class="circle_2"></div>
+                                    <div class="circle_2"></div>
+                                </div>
+                                <div class="score_value_3">
+                                    <span><a href="#">480p</a></span>
+                                    <span><a href="#">720p</a></span>
+                                    <span><a href="#">1080p</a></span>
+                                </div>
                             </td>
-                            <td>زیرنویس</td>
+                            <td><a href="#">دانلود زیرنویس</a></td>
                         </tr>
                         <tr>
-                            <td>دانلود قسمت اول سریال ginny and georgia
-                            </td>
+                            <td>دانلود قسمت دوم سریال ginny and georgia</td>
                             <td>
-                                <ul class="Quality_box">
-                                    <li class="t_circle"></li>
-                                    <li class="t_circle"></li>
-                                    <li class="t_circle"></li>
-                                </ul>
+                                <div class="score_box">
+                                    <div class="circle_2"></div>
+                                    <div class="circle_2"></div>
+                                    <div class="circle_2"></div>
+                                </div>
+                                <div class="score_value_3">
+                                    <span><a href="#">480p</a></span>
+                                    <span><a href="#">720p</a></span>
+                                    <span><a href="#">1080p</a></span>
+                                </div>
                             </td>
-                            <td>زیرنویس</td>
+                            <td><a href="#">دانلود زیرنویس</a></td>
                         </tr>
                         <tr>
-                            <td>دانلود قسمت اول سریال ginny and georgia
-                            </td>
+                            <td>دانلود قسمت سوم سریال ginny and georgia</td>
                             <td>
-                                <ul class="Quality_box">
-                                    <li class="t_circle"></li>
-                                    <li class="t_circle"></li>
-                                    <li class="t_circle"></li>
-                                </ul>
+                                <div class="score_box">
+                                    <div class="circle_2"></div>
+                                    <div class="circle_2"></div>
+                                    <div class="circle_2"></div>
+                                </div>
+                                <div class="score_value_3">
+                                    <span><a href="#">480p</a></span>
+                                    <span><a href="#">720p</a></span>
+                                    <span><a href="#">1080p</a></span>
+                                </div>
                             </td>
-                            <td>زیرنویس</td>
+                            <td><a href="#">دانلود زیرنویس</a></td>
                         </tr>
                         <tr>
-                            <td>دانلود قسمت اول سریال ginny and georgia
-                            </td>
+                            <td>دانلود قسمت چهارم سریال ginny and georgia</td>
                             <td>
-                                <ul class="Quality_box">
-                                    <li class="t_circle"></li>
-                                    <li class="t_circle"></li>
-                                    <li class="t_circle"></li>
-                                </ul>
+                                <div class="score_box">
+                                    <div class="circle_2"></div>
+                                    <div class="circle_2"></div>
+                                    <div class="circle_2"></div>
+                                </div>
+                                <div class="score_value_3">
+                                    <span><a href="#">480p</a></span>
+                                    <span><a href="#">720p</a></span>
+                                    <span><a href="#">1080p</a></span>
+                                </div>
                             </td>
-                            <td>زیرنویس</td>
+                            <td><a href="#">دانلود زیرنویس</a></td>
                         </tr>
                         <tr>
-                            <td>دانلود قسمت اول سریال ginny and georgia
-                            </td>
+                            <td>دانلود قسمت پنجم سریال ginny and georgia</td>
                             <td>
-                                <ul class="Quality_box">
-                                    <li class="t_circle"></li>
-                                    <li class="t_circle"></li>
-                                    <li class="t_circle"></li>
-                                </ul>
+                                <div class="score_box">
+                                    <div class="circle_2"></div>
+                                    <div class="circle_2"></div>
+                                    <div class="circle_2"></div>
+                                </div>
+                                <div class="score_value_3">
+                                    <span><a href="#">480p</a></span>
+                                    <span><a href="#">720p</a></span>
+                                    <span><a href="#">1080p</a></span>
+                                </div>
                             </td>
-                            <td>زیرنویس</td>
+                            <td><a href="#">دانلود زیرنویس</a></td>
                         </tr>
                         <tr>
-                            <td>دانلود قسمت اول سریال ginny and georgia
-                            </td>
+                            <td>دانلود قسمت ششم سریال ginny and georgia</td>
                             <td>
-                                <ul class="Quality_box">
-                                    <li class="t_circle"></li>
-                                    <li class="t_circle"></li>
-                                    <li class="t_circle"></li>
-                                </ul>
+                                <div class="score_box">
+                                    <div class="circle_2"></div>
+                                    <div class="circle_2"></div>
+                                    <div class="circle_2"></div>
+                                </div>
+                                <div class="score_value_3">
+                                    <span><a href="#">480p</a></span>
+                                    <span><a href="#">720p</a></span>
+                                    <span><a href="#">1080p</a></span>
+                                </div>
                             </td>
-                            <td>زیرنویس</td>
+                            <td><a href="#">دانلود زیرنویس</a></td>
                         </tr>
 
                     </table>
@@ -330,57 +456,91 @@
         </div>
         <!-- comment panel -->
         <div class="comment_panel">
-
-
-            <form class="contact100-form">
-                <span class="contact100-form-title">
-                    دیدگاهتان را بنویسید:
-                </span>
-                <div class="wrap-input100 validate-input" data-validate="Message is required">
-                    <span class="label-input100">دیدگاه:</span>
-                    <textarea class="input100" name="message" placeholder="دیدگاه خود را بنویسید."></textarea>
-                    <span class="focus-input100"></span>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="wrapper">
+                        <div class="row no-gutters">
+                            <div class="col-md-8 d-flex align-items-stretch">
+                                <div class="contact-wrap w-100 p-md-5 p-4 py-5">
+                                    <h3 class="mb-4">دیدگاه خود را بنویسید.</h3>
+                                    <div id="form-message-warning" class="mb-4"></div>
+                                    <div id="form-message-success" class="mb-4">
+                                        پیغام شما ارسال شد. متشکریم!
+                                    </div>
+                                    <form method="POST" id="contactForm" name="contactForm" class="contactForm">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" name="name" id="name" placeholder="نام">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <input type="email" class="form-control" name="email" id="email" placeholder="ایمیل">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" name="subject" id="subject" placeholder="موضوع">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <textarea name="message" class="form-control" id="message" cols="30" rows="6" placeholder="دیدگاه"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <input type="submit" value="Send Message" class="me_btn">
+                                                    <div class="submitting"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-md-4 d-flex align-items-stretch">
+                                <div class="info-wrap w-100 p-md-5 p-4 py-5 img">
+                                    <h3 class="mb-3">اطلاعات تماس</h3>
+                                    <p class="mb-3">ما برای هر گونه پیشنهاد ، یا فقط گفت و گو آماده ایم.</p>
+                                    <div class="dbox w-100 d-flex align-items-start">
+                                        <div class="icon d-flex align-items-center justify-content-center">
+                                            <span class="fa fa-map-marker"></span>
+                                        </div>
+                                        <div class="text pl-3">
+                                            <p><span>آدرس:</span> تهران - شهرک غرب</p>
+                                        </div>
+                                    </div>
+                                    <div class="dbox w-100 d-flex align-items-center">
+                                        <div class="icon d-flex align-items-center justify-content-center">
+                                            <span class="fa fa-phone"></span>
+                                        </div>
+                                        <div class="text pl-3">
+                                            <p><span>تلفن:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="dbox w-100 d-flex align-items-center">
+                                        <div class="icon d-flex align-items-center justify-content-center">
+                                            <span class="fa fa-paper-plane"></span>
+                                        </div>
+                                        <div class="text pl-3">
+                                            <p><span>ایمیل:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="dbox w-100 d-flex align-items-center">
+                                        <div class="icon d-flex align-items-center justify-content-center">
+                                            <span class="fa fa-globe"></span>
+                                        </div>
+                                        <div class="text pl-3">
+                                            <p><span>وبسایت</span> <a href="#">yoursite.com</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Name is required">
-                    <span class="label-input100">نام:</span>
-                    <input class="input100" type="text" name="name" placeholder="نام خود را وارد کنید.">
-                    <span class="focus-input100"></span>
-                </div>
-
-                <div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-                    <span class="label-input100">ایمیل:</span>
-                    <input class="input100" type="text" name="email" placeholder="ایمیل خود را وارد کنید.">
-                    <span class="focus-input100"></span>
-                </div>
-
-                <div class="container-contact100-form-btn">
-                    <button class="contact100-form-btn">
-						<span>
-							ارسال دیدگاه
-							<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
-						</span>
-					</button>
-                </div>
-            </form>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            </div>
         </div>
         <!-- CATEGORY  -->
         <div class="col-lg-3 category">
@@ -425,19 +585,63 @@
 <script src="js/bootstrap.min.js "></script>
 <script src="js/swiper-bundle.js "></script>
 <script src="js/swiper-bundle.min.js "></script>
+<script src="js/choices.js"></script>
+
+<!-- modal -->
 <script>
-    // Get the element with id="defaultOpen" and click on it
-    document.getElementById("defaultOpen").click();
-    //  Initialize Swiper 
-    var swiper = new Swiper(".mySwiper", {
-        direction: "horizontal",
-        slidesPerView: 1,
-        spaceBetween: 30,
-        mousewheel: true,
-        pagination: {
-            el: ".swiper_pagination",
-            clickable: true,
-        },
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+<script>
+    const customSelects = document.querySelectorAll("select");
+    const deleteBtn = document.getElementById('delete')
+    const choices = new Choices('select', {
+        searchEnabled: false,
+        removeItemButton: true,
+        itemSelectText: '',
+    });
+    for (let i = 0; i < customSelects.length; i++) {
+        customSelects[i].addEventListener('addItem', function(event) {
+            if (event.detail.value) {
+                let parent = this.parentNode.parentNode
+                parent.classList.add('valid')
+                parent.classList.remove('invalid')
+            } else {
+                let parent = this.parentNode.parentNode
+                parent.classList.add('invalid')
+                parent.classList.remove('valid')
+            }
+        }, false);
+    }
+    deleteBtn.addEventListener("click", function(e) {
+        e.preventDefault()
+        const deleteAll = document.querySelectorAll('.choices__button')
+        for (let i = 0; i < deleteAll.length; i++) {
+            deleteAll[i].click();
+        }
     });
 </script>
 
