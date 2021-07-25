@@ -455,87 +455,71 @@
             </div>
         </div>
         <!-- comment panel -->
-        <div class="comment_panel">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="wrapper">
-                        <div class="row no-gutters">
-                            <div class="col-md-8 d-flex align-items-stretch">
-                                <div class="contact-wrap w-100 p-md-5 p-4 py-5">
-                                    <h3 class="mb-4">دیدگاه خود را بنویسید.</h3>
-                                    <div id="form-message-warning" class="mb-4"></div>
-                                    <div id="form-message-success" class="mb-4">
-                                        پیغام شما ارسال شد. متشکریم!
-                                    </div>
-                                    <form method="POST" id="contactForm" name="contactForm" class="contactForm">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <input type="text" class="form-control" name="name" id="name" placeholder="نام">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <input type="email" class="form-control" name="email" id="email" placeholder="ایمیل">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <input type="text" class="form-control" name="subject" id="subject" placeholder="موضوع">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <textarea name="message" class="form-control" id="message" cols="30" rows="6" placeholder="دیدگاه"></textarea>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <input type="submit" value="Send Message" class="me_btn">
-                                                    <div class="submitting"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
+        <div class="wrapper">
+            <div class="row no_gutters">
+                <div class="col-md-6 d_flex">
+                    <div class="contact_wrap w_100 p_4 py_5">
+                        <h3 class="mb_3">دیدگاه خود را بنویسید.</h3>
+                        <div id="form_message_warning" class="mb_3"></div>
+                        <div id="form_message_success" class="mb_3">
+                            پیغام شما ارسال شد. متشکریم!
+                        </div>
+                        <form method="POST" id="contactForm" name="contactForm" class="contactForm">
+                            <div class="user_box">
+                                <input type="text " class="form_control " name="name " id="name " required>
+                                <label>نام و نام خانوادگی</label>
                             </div>
-                            <div class="col-md-4 d-flex align-items-stretch">
-                                <div class="info-wrap w-100 p-md-5 p-4 py-5 img">
-                                    <h3 class="mb-3">اطلاعات تماس</h3>
-                                    <p class="mb-3">ما برای هر گونه پیشنهاد ، یا فقط گفت و گو آماده ایم.</p>
-                                    <div class="dbox w-100 d-flex align-items-start">
-                                        <div class="icon d-flex align-items-center justify-content-center">
-                                            <span class="fa fa-map-marker"></span>
-                                        </div>
-                                        <div class="text pl-3">
-                                            <p><span>آدرس:</span> تهران - شهرک غرب</p>
-                                        </div>
-                                    </div>
-                                    <div class="dbox w-100 d-flex align-items-center">
-                                        <div class="icon d-flex align-items-center justify-content-center">
-                                            <span class="fa fa-phone"></span>
-                                        </div>
-                                        <div class="text pl-3">
-                                            <p><span>تلفن:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
-                                        </div>
-                                    </div>
-                                    <div class="dbox w-100 d-flex align-items-center">
-                                        <div class="icon d-flex align-items-center justify-content-center">
-                                            <span class="fa fa-paper-plane"></span>
-                                        </div>
-                                        <div class="text pl-3">
-                                            <p><span>ایمیل:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
-                                        </div>
-                                    </div>
-                                    <div class="dbox w-100 d-flex align-items-center">
-                                        <div class="icon d-flex align-items-center justify-content-center">
-                                            <span class="fa fa-globe"></span>
-                                        </div>
-                                        <div class="text pl-3">
-                                            <p><span>وبسایت</span> <a href="#">yoursite.com</a></p>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="user_box">
+                                <input type="email " class="form_control " name="email " id="email " required>
+                                <label>ایمیل</label>
+                            </div>
+                            <div class="user_box">
+                                <input type="text " class="form_control " name="subject " id="subject " required>
+                                <label>موضوع</label>
+                            </div>
+                            <div class="user_box">
+                                <textarea name="message " class="form_control " id="message " cols="30 " rows="6 " required></textarea>
+                                <label>دیدگاه</label>
+                            </div>
+                            <input type="submit" value="ارسال دیدگاه" class="me_btn">
+                            <div class="submitting"></div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-6 d_flex">
+                    <div class="info_wrap w_100 p_4 py_5">
+                        <h3 class="mb_3">اطلاعات تماس</h3>
+                        <p class="mb_3">ما برای هر گونه پیشنهاد ، یا فقط گفت و گو آماده ایم.</p>
+                        <div class="dbox w_100 d_flex">
+                            <div class="icon d_flex ">
+                                <span class="fa fa-map-marker "></span>
+                            </div>
+                            <div class="text">
+                                <p><span>آدرس:</span> تهران - شهرک غرب</p>
+                            </div>
+                        </div>
+                        <div class="dbox w_100 d_flex">
+                            <div class="icon d_flex">
+                                <span class="fa fa-phone"></span>
+                            </div>
+                            <div class="text">
+                                <p><span>تلفن:</span> <a href="tel://1234567920 ">+ 1235 2355 98</a></p>
+                            </div>
+                        </div>
+                        <div class="dbox w_100 d_flex">
+                            <div class="icon d_flex">
+                                <span class="fa fa-paper-plane"></span>
+                            </div>
+                            <div class="text">
+                                <p><span>ایمیل:</span> <a href="mailto:info@yoursite.com ">info@yoursite.com</a></p>
+                            </div>
+                        </div>
+                        <div class="dbox w_100 d_flex">
+                            <div class="icon d_flex">
+                                <span class="fa fa-globe "></span>
+                            </div>
+                            <div class="text">
+                                <p><span>وبسایت</span> <a href="# ">yoursite.com</a></p>
                             </div>
                         </div>
                     </div>
@@ -543,38 +527,38 @@
             </div>
         </div>
         <!-- CATEGORY  -->
-        <div class="col-lg-3 category">
-            <div class="movie_box">
-                <img src="img/images/gairlsofthesun.jpg" alt="">
-                <h3 class="movie_title">CHERRY 2020</h3>
+        <div class="col-lg-3 category ">
+            <div class="movie_box ">
+                <img src="img/images/gairlsofthesun.jpg " alt=" ">
+                <h3 class="movie_title ">CHERRY 2020</h3>
             </div>
         </div>
-        <div class="col-lg-3 category">
-            <div class="movie_box">
-                <img src="img/images/gairlsofthesun.jpg" alt="">
-                <h3 class="movie_title">CHERRY 2020</h3>
+        <div class="col-lg-3 category ">
+            <div class="movie_box ">
+                <img src="img/images/gairlsofthesun.jpg " alt=" ">
+                <h3 class="movie_title ">CHERRY 2020</h3>
             </div>
         </div>
-        <div class="col-lg-3 category">
-            <div class="movie_box">
-                <img src="img/images/gairlsofthesun.jpg" alt="">
-                <h3 class="movie_title">CHERRY 2020</h3>
+        <div class="col-lg-3 category ">
+            <div class="movie_box ">
+                <img src="img/images/gairlsofthesun.jpg " alt=" ">
+                <h3 class="movie_title ">CHERRY 2020</h3>
             </div>
         </div>
-        <div class="col-lg-3 category">
-            <div class="movie_box">
-                <img src="img/images/gairlsofthesun.jpg" alt="">
-                <h3 class="movie_title">CHERRY 2020</h3>
+        <div class="col-lg-3 category ">
+            <div class="movie_box ">
+                <img src="img/images/gairlsofthesun.jpg " alt=" ">
+                <h3 class="movie_title ">CHERRY 2020</h3>
             </div>
         </div>
     </div>
     <footer>
-        <div class="footer">
-            <ul class="f_tabs">
-                <li><a href="#">درباره ما</a></li>
-                <li><a href="#">تماس با ما</a></li>
-                <li><a href="#">قوانین</a></li>
-                <li><a href="#">داشتن اشتراک ویژه</a></li>
+        <div class="footer ">
+            <ul class="f_tabs ">
+                <li><a href="# ">درباره ما</a></li>
+                <li><a href="# ">تماس با ما</a></li>
+                <li><a href="# ">قوانین</a></li>
+                <li><a href="# ">داشتن اشتراک ویژه</a></li>
             </ul>
             <p>تمامی محصولات این سایت، حسب مورد دارای مجوز لازم از مراجع ذیصلاح می باشند و فعالیت های این سایت تابع قوانین و مقررات جمهوری اسلامی ایران است</p>
         </div>
@@ -585,9 +569,65 @@
 <script src="js/bootstrap.min.js "></script>
 <script src="js/swiper-bundle.js "></script>
 <script src="js/swiper-bundle.min.js "></script>
-<script src="js/choices.js"></script>
+<script src="js/choices.js "></script>
 
 <!-- modal -->
+<script>
+    // Get the modal
+    var modal = document.getElementById("myModal ");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn ");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close ")[0];
+
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+        modal.style.display = "block ";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none ";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none ";
+        }
+    }
+</script>
+<script>
+    const customSelects = document.querySelectorAll("select ");
+    const deleteBtn = document.getElementById('delete')
+    const choices = new Choices('select', {
+        searchEnabled: false,
+        removeItemButton: true,
+        itemSelectText: '',
+    });
+    for (let i = 0; i < customSelects.length; i++) {
+        customSelects[i].addEventListener('addItem', function(event) {
+            if (event.detail.value) {
+                let parent = this.parentNode.parentNode
+                parent.classList.add('valid')
+                parent.classList.remove('invalid')
+            } else {
+                let parent = this.parentNode.parentNode
+                parent.classList.add('invalid')
+                parent.classList.remove('valid')
+            }
+        }, false);
+    }
+    deleteBtn.addEventListener("click ", function(e) {
+        e.preventDefault()
+        const deleteAll = document.querySelectorAll('.choices__button')
+        for (let i = 0; i < deleteAll.length; i++) {
+            deleteAll[i].click();
+        }
+    });
+</script>
 <script>
     // Get the modal
     var modal = document.getElementById("myModal");
@@ -608,41 +648,12 @@
         modal.style.display = "none";
     }
 
-    // When the user clicks anywhere outside of the modal, close it
+    // When the user clicks anywhere outside of the modal, close
     window.onclick = function(event) {
         if (event.target == modal) {
             modal.style.display = "none";
         }
     }
-</script>
-<script>
-    const customSelects = document.querySelectorAll("select");
-    const deleteBtn = document.getElementById('delete')
-    const choices = new Choices('select', {
-        searchEnabled: false,
-        removeItemButton: true,
-        itemSelectText: '',
-    });
-    for (let i = 0; i < customSelects.length; i++) {
-        customSelects[i].addEventListener('addItem', function(event) {
-            if (event.detail.value) {
-                let parent = this.parentNode.parentNode
-                parent.classList.add('valid')
-                parent.classList.remove('invalid')
-            } else {
-                let parent = this.parentNode.parentNode
-                parent.classList.add('invalid')
-                parent.classList.remove('valid')
-            }
-        }, false);
-    }
-    deleteBtn.addEventListener("click", function(e) {
-        e.preventDefault()
-        const deleteAll = document.querySelectorAll('.choices__button')
-        for (let i = 0; i < deleteAll.length; i++) {
-            deleteAll[i].click();
-        }
-    });
 </script>
 
 </html>
