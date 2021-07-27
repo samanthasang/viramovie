@@ -184,7 +184,7 @@
         body {
             background: #141414!important;
             direction: rtl;
-            line-height: 1;
+            line-height: 1em;
             font-family: 'ir_sans_b', sans-serif !important;
         }
         
@@ -1073,26 +1073,71 @@
         
         .dashboard {
             display: flex;
-            height: 1300px;
-            background: #333333;
+            height: auto;
+            background: #242424;
             padding: 0;
             border-radius: 5px;
         }
         
+        .user_info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: auto;
+            font-size: 16px;
+            line-height: 50px;
+            border-radius: 10px;
+            background-color: #242424;
+            margin: 60px 40px 0 40px;
+            padding: 10px 0;
+        }
+        
+        .user_info img {
+            float: right;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            height: 70px;
+            width: 70px;
+            border-radius: 50%;
+        }
+        
+        .user_name {
+            margin-bottom: 10px;
+            width: auto;
+            height: auto;
+        }
+        
+        .user_info span,
+        .user_name,
+        .user_mail,
+        .sub_type {
+            color: #e1e1e1;
+            line-height: normal;
+        }
+        
+        .user_mail,
+        .sub_type {
+            font-size: 12px;
+        }
+        
+        .pr_edit {
+            position: relative;
+            top: -120px;
+            right: 150px;
+        }
+        
         .dash_btn {
-            background: #fff;
+            background: #eb8307;
             border-top-left-radius: 100px;
             border-top-right-radius: 5px;
             border-bottom-right-radius: 5px;
-            padding: 0;
+            padding: 10px 0;
         }
         
         .dash_btn ul {
             display: flex;
             flex-direction: column;
             align-items: center;
-            position: relative;
-            top: 100px;
             margin-right: 20px;
         }
         
@@ -1105,7 +1150,7 @@
         }
         
         .dash_btn ul li:hover {
-            background: #333333;
+            background: #242424;
             border-top-right-radius: 50px;
             border-bottom-right-radius: 50px;
         }
@@ -1131,32 +1176,35 @@
             justify-content: center;
             height: 40px;
             margin: 60px 0;
-            background: #fff;
+            background: #343434;
             border-radius: 15px;
         }
         
         .btn_group button {
             border-radius: 15px;
             border: none;
-            background: #fff;
+            background: #343434;
+            color: #e1e1e1;
         }
         
         .btn_group button:hover,
         .btn_group button:focus {
             border-radius: 15px;
             background: #EB8307;
+            color: #141414;
         }
         
         .btn-block {
             margin: 0 !important;
         }
         
-        .Subscription_box {
-            background: #fff;
+        .Normal_subscription,
+        .Special_subscription {
+            background: #343434;
             border-radius: 15px;
             height: 350px;
             padding: 50px;
-            margin: 50px;
+            margin: 50px 0;
         }
         
         .Subscription_type {
@@ -1176,6 +1224,8 @@
         
         .Subscription_option {
             min-height: 200px;
+            color: #e1e1e1;
+            margin-top: 15px;
         }
         
         .Subscription_option img {
@@ -1185,28 +1235,34 @@
             left: 0;
         }
         
-        .buy_btn {
+        .buy_btn .me_btn {
             float: left;
-            margin-top: 20px;
         }
         
-        .Comments_box {
+        .panel_gray {
+            background: #343434;
+            border-radius: 10px;
+            min-height: 200px;
+        }
+        
+        .panel_gray a {
+            float: left;
+        }
+        
+        .panel-heading {
+            height: 40px;
+            font-size: 12px;
+            line-height: 2em;
+        }
+        
+        .panel-heading span {
             display: flex;
-            flex-direction: column;
-            background: #fff;
-            border-radius: 15px;
-            height: 150px;
-            padding: 20px;
-            margin: 50px;
+            align-items: center;
         }
         
-        .Comments_box .buy_btn {
-            display: flex;
-            justify-content: flex-end;
-        }
-        
-        .Comments_box span {
-            color: #000;
+        .comment_txt p {
+            line-height: 2em;
+            color: #e1e1e1;
         }
         
         .c_date {
@@ -1218,8 +1274,9 @@
         }
         
         .c_like img {
-            width: 30px;
-            height: 30px;
+            width: 25px;
+            height: 25px;
+            margin-right: 5px;
         }
         /*************** post page *******************/
         
@@ -1274,4 +1331,41 @@
             padding: 0;
             color: #fff;
             text-align: center;
+        }
+        /* trailer page */
+        
+        .traler_panel {
+            width: 100%;
+            padding: 0;
+        }
+        
+        .tr_box,
+        .actors {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #242424;
+            color: #e1e1e1;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 50px;
+            padding: 20px 0;
+        }
+        
+        .tr_box img {
+            display: block;
+            margin: auto;
+            width: 500px;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .actors img {
+            display: block;
+            margin: auto;
+            width: 230px;
+            height: 300px;
+            border-radius: 10px;
+            margin-bottom: 20px;
         }
