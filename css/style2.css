@@ -28,7 +28,7 @@
 }
 
 .no_gutters {
-    _margin-right: 0;
+    margin-right: 0;
     margin-left: 0;
 }
 
@@ -62,6 +62,10 @@
 
 .py_5 {
     padding-top: 3rem !important;
+}
+
+.mb_2 {
+    margin-bottom: 20px;
 }
 
 .mb_3 {

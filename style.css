@@ -468,7 +468,10 @@
         
         .poster_btn {
             display: flex;
-            margin: 20px 0;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            margin: 30px 0;
         }
         /************************* advanced search *************************/
         
@@ -1122,8 +1125,13 @@
         
         .pr_edit {
             position: relative;
-            top: -120px;
-            right: 150px;
+            top: -30px;
+            right: 0;
+        }
+        
+        .pr_edit img {
+            width: 30px;
+            height: 30px;
         }
         
         .dash_btn {
@@ -1247,6 +1255,11 @@
         
         .panel_gray a {
             float: left;
+            color: #e1e1e1;
+        }
+        
+        a.me_btn {
+            color: #141414;
         }
         
         .panel-heading {
@@ -1258,6 +1271,22 @@
         .panel-heading span {
             display: flex;
             align-items: center;
+        }
+        
+        .panel-body img {
+            border-radius: 10px;
+        }
+        
+        .panel-body h3 {
+            color: #e1e1e1;
+            margin: 5px;
+        }
+        
+        .info_line {
+            display: flex;
+            align-items: center;
+            color: #e1e1e1;
+            margin-bottom: 5px;
         }
         
         .comment_txt p {
@@ -1278,6 +1307,89 @@
             height: 25px;
             margin-right: 5px;
         }
+        
+        .img-circle {
+            border-radius: 50% !important;
+        }
+        
+        .media-body p {
+            color: #e1e1e1;
+        }
+        
+        li.media {
+            padding-bottom: 5px;
+            border-bottom: 1px solid #444;
+        }
+        /*  */
+        /*  */
+        /*  */
+        
+        .account-settings .user-profile {
+            margin: 0 0 1rem 0;
+            padding-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .account-settings .user-profile .user-avatar {
+            margin: 0 0 1rem 0;
+        }
+        
+        .account-settings .user-profile .user-avatar img {
+            width: 90px;
+            height: 90px;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 100px;
+            border-radius: 50%;
+        }
+        
+        .account-settings .user-profile h5.user-name {
+            margin: 0 0 0.5rem 0;
+        }
+        
+        .account-settings .user-profile h6.user-email {
+            margin: 0;
+            font-size: 0.8rem;
+            font-weight: 400;
+            color: #9fa8b9;
+        }
+        
+        .account-settings .about {
+            margin: 2rem 0 0 0;
+            text-align: center;
+        }
+        
+        .account-settings .about h5 {
+            margin: 0 0 15px 0;
+            color: #eb8307;
+        }
+        
+        .account-settings .about p {
+            font-size: 0.825rem;
+            color: #e1e1e1;
+        }
+        
+        .form-control {
+            border: 1px solid #cfd1d8;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            border-radius: 2px;
+            font-size: .825rem;
+            background: #ffffff;
+            color: #2e323c;
+        }
+        
+        .card {
+            background: #343434;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 10px;
+            border: 0;
+            padding: 10px;
+            height: 100%;
+        }
+        /*  */
+        /*  */
+        /*  */
         /*************** post page *******************/
         
         .pagination {
@@ -1341,15 +1453,12 @@
         
         .tr_box,
         .actors {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
             background: #242424;
             color: #e1e1e1;
             height: auto;
             border-radius: 10px;
             margin-bottom: 50px;
-            padding: 20px 0;
+            padding: 20px;
         }
         
         .tr_box img {
@@ -1368,4 +1477,29 @@
             height: 300px;
             border-radius: 10px;
             margin-bottom: 20px;
+        }
+        
+        .video {
+            width: 500px;
+            border-radius: 10px;
+        }
+        
+        .wrapper_2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+        
+        .playpause img {
+            width: 20%;
+            height: 30%;
+            position: absolute;
+            left: 0%;
+            right: 0%;
+            top: 0%;
+            bottom: 0%;
+            margin: auto;
+            background-size: contain;
+            background-position: center;
         }
