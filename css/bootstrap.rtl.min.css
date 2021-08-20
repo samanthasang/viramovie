@@ -4334,7 +4334,7 @@ fieldset:disabled .btn {
     vertical-align: middle;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100%
+    background-size: 100%;
 }
 
 .navbar-nav-scroll {
@@ -4837,7 +4837,7 @@ fieldset:disabled .btn {
 
 .accordion-item {
     background-color: #fff;
-    border: 1px solid rgba(0, 0, 0, .125)
+    border: 1px solid rgba(0, 0, 0, .125);
 }
 
 .accordion-item:first-of-type {

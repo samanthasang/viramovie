@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>contact us</title>
+    <title>v_index</title>
     <link type="text/css" rel="stylesheet" href="style.css">
     <link type="text/css" rel="stylesheet" href="css/bootstrap.rtl.min.css">
     <link type="text/css" rel="stylesheet" href="css/hover-min.css">
@@ -19,7 +19,11 @@
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#ee341b" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                  </svg>
+            </span>
           </button>
             <a class="navbar-brand" href="#"><img src="img/brand.png" alt=""></a>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
@@ -88,8 +92,8 @@
                         <span>2016</span>
                     </div>
                     <ul class="poster_btn">
-                        <li class="btn btn_orange"><a href="#">تماشا</a></li>
-                        <li class="btn btn_orange"><a href="#">دانلود</a></li>
+                        <li><a href="#" class="btn btn_orange">تماشا</a></li>
+                        <li><a href="#" class="btn btn_orange">دانلود</a></li>
                     </ul>
                 </div>
             </div>
@@ -186,128 +190,123 @@
     <!--end swiper -->
     <div class="container">
         <!--start advansed search -->
-        <div class="s009">
-            <form>
-                <div class="inner-form">
-                    <div class="basic-search">
-                        <div class="input-field">
-                            <input id="search" type="text" placeholder="جست و جو کنید" onfocus="this.placeholder='' " onblur="this.placeholder='جست و جو کنید' " />
-                            <div class="icon-wrap">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-search" viewBox="0 0 16 16">
-                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                              </svg>
-                            </div>
+        <div class="searchBox">
+            <div class="searchContainer">
+                <div class="input-group">
+                    <button class="btn btn_orange" onclick=" getResults() ">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                        </svg>
+                    </button>
+                    <input type="text" class="form-control">
+                </div>
+                <a href="#" class="btn btn_orange" onclick="toggleFilters() ">
+                فیلتر
+            </a>
+            </div>
+            <div class="filtersContainer " id="FiltersBox ">
+                <span class="desc">جست و جوی پیشرفته</span>
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-6 input-field">
+                        <div class="input-select">
+                            <select data-trigger="" name="choices-single-defaul">
+                                    <option placeholder="" value="">تجهیزات جانبی</option>
+                                    <option>زیرشاخه 1</option>
+                                    <option>زیرشاخه 2</option>
+                                </select>
                         </div>
                     </div>
-                    <div class="advance-search">
-                        <span class="desc">جست و جوی پیشرفته</span>
-                        <div class="row">
-                            <div class="input-field">
-                                <div class="input-select">
-                                    <select data-trigger="" name="choices-single-defaul">
-                                        <option placeholder="" value="">تجهیزات جانبی</option>
-                                        <option>زیرشاخه 1</option>
-                                        <option>زیرشاخه 2</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="input-field">
-                                <div class="input-select">
-                                    <select data-trigger="" name="choices-single-defaul">
-                                    <option placeholder="" value="">رنگ</option>
-                                    <option>زیرشاخه 1</option>
-                                    <option>زیرشاخه 2</option>
-                                </select>
-                                </div>
-                            </div>
-                            <div class="input-field">
-                                <div class="input-select">
-                                    <select data-trigger="" name="choices-single-defaul">
-                                    <option placeholder="" value="">اندازه</option>
-                                    <option>زیرشاخه 1</option>
-                                    <option>زیرشاخه 2</option>
-                                </select>
-                                </div>
-                            </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 input-field">
+                        <div class="input-select">
+                            <select data-trigger="" name="choices-single-defaul">
+                                <option placeholder="" value="">رنگ</option>
+                                <option>زیرشاخه 1</option>
+                                <option>زیرشاخه 2</option>
+                            </select>
                         </div>
-                        <div class="row second">
-                            <div class="input-field">
-                                <div class="input-select">
-                                    <select data-trigger="" name="choices-single-defaul">
-                                    <option placeholder="" value="">فروش</option>
-                                    <option>زیرشاخه 1</option>
-                                    <option>زیرشاخه 2</option>
-                                </select>
-                                </div>
-                            </div>
-                            <div class="input-field">
-                                <div class="input-select">
-                                    <select data-trigger="" name="choices-single-defaul">
-                                    <option placeholder="" value="">زمان</option>
-                                    <option>آخرین بار</option>
-                                    <option>امروز</option>
-                                    <option>این هفته</option>
-                                    <option>این ماه</option>
-                                    <option>این سال</option>
-                                </select>
-                                </div>
-                            </div>
-                            <div class="input-field">
-                                <div class="input-select">
-                                    <select data-trigger="" name="choices-single-defaul">
-                                    <option placeholder="" value="">نوع</option>
-                                    <option>زیرشاخه 1</option>
-                                    <option>زیرشاخه 2</option>
-                                </select>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 input-field">
+                        <div class="input-select">
+                            <select data-trigger="" name="choices-single-defaul">
+                                <option placeholder="" value="">اندازه</option>
+                                <option>زیرشاخه 1</option>
+                                <option>زیرشاخه 2</option>
+                            </select>
                         </div>
-                        <div class="row Third">
-                            <div class="input-field">
-                                <div class="input-select">
-                                    <select data-trigger="" name="choices-single-defaul">
-                                    <option placeholder="" value="">فروش</option>
-                                    <option>زیرشاخه 1</option>
-                                    <option>زیرشاخه 2</option>
-                                </select>
-                                </div>
-                            </div>
-                            <div class="input-field">
-                                <div class="input-select">
-                                    <select data-trigger="" name="choices-single-defaul">
-                                    <option placeholder="" value="">زمان</option>
-                                    <option>آخرین بار</option>
-                                    <option>امروز</option>
-                                    <option>این هفته</option>
-                                    <option>این ماه</option>
-                                    <option>این سال</option>
-                                </select>
-                                </div>
-                            </div>
-                            <div class="input-field">
-                                <div class="input-select">
-                                    <select data-trigger="" name="choices-single-defaul">
-                                    <option placeholder="" value="">نوع</option>
-                                    <option>زیرشاخه 1</option>
-                                    <option>زیرشاخه 2</option>
-                                </select>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 input-field">
+                        <div class="input-select">
+                            <select data-trigger="" name="choices-single-defaul">
+                                <option placeholder="" value="">فروش</option>
+                                <option>زیرشاخه 1</option>
+                                <option>زیرشاخه 2</option>
+                            </select>
                         </div>
-                        <div class="row Fourth">
-                            <div class="input-field">
-                                <div class="group-btn">
-                                    <button class=" btn btn_orange">جست و جو</button>
-                                    <button class="btn-delete" id="delete">حذف</button>
-                                </div>
-                                <div class="result-count">
-                                    نتیجه جست و جو <span>108 </span>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 input-field">
+                        <div class="input-select">
+                            <select data-trigger="" name="choices-single-defaul">
+                                <option placeholder="" value="">زمان</option>
+                                <option>آخرین بار</option>
+                                <option>امروز</option>
+                                <option>این هفته</option>
+                                <option>این ماه</option>
+                                <option>این سال</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 input-field">
+                        <div class="input-select">
+                            <select data-trigger="" name="choices-single-defaul">
+                                <option placeholder="" value="">نوع</option>
+                                <option>زیرشاخه 1</option>
+                                <option>زیرشاخه 2</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 input-field">
+                        <div class="input-select">
+                            <select data-trigger="" name="choices-single-defaul">
+                                <option placeholder="" value="">فروش</option>
+                                <option>زیرشاخه 1</option>
+                                <option>زیرشاخه 2</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 input-field">
+                        <div class="input-select">
+                            <select data-trigger="" name="choices-single-defaul">
+                                <option placeholder="" value="">زمان</option>
+                                <option>آخرین بار</option>
+                                <option>امروز</option>
+                                <option>این هفته</option>
+                                <option>این ماه</option>
+                                <option>این سال</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 input-field">
+                        <div class="input-select">
+                            <select data-trigger="" name="choices-single-defaul">
+                                <option placeholder="" value="">نوع</option>
+                                <option>زیرشاخه 1</option>
+                                <option>زیرشاخه 2</option>
+                            </select>
                         </div>
                     </div>
                 </div>
-            </form>
+                <div class="row">
+                    <div class="input-field">
+                        <div class="group-btn">
+                            <button class="btn btn_orange">جست و جو</button>
+                            <button class="btn btn_orange" id="delete">حذف</button>
+                        </div>
+                        <div class="result-count">
+                            نتیجه جست و جو <span>108 </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <!--end advansed search -->
 
@@ -342,7 +341,7 @@
                 <div class="row">
                     <div class="col-lg-3 col-md-3 col-sm-6">
                         <div class="movie_box">
-                            <div class="movie_img">
+                            <div class="hvr_img">
                                 <a href="#"><img src="img/got.jpg" alt=""></a>
                             </div>
                             <h3 class="movie_title"><a href="#">Latest News Post</a></h3>
@@ -356,7 +355,7 @@
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6">
                         <div class="movie_box">
-                            <div class="movie_img">
+                            <div class="hvr_img">
                                 <a href="#"><img src="img/got.jpg" alt=""></a>
                             </div>
                             <h3 class="movie_title"><a href="#">Latest News Post</a></h3>
@@ -370,7 +369,7 @@
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6">
                         <div class="movie_box">
-                            <div class="movie_img">
+                            <div class="hvr_img">
                                 <a href="#"><img src="img/got.jpg" alt=""></a>
                             </div>
                             <h3 class="movie_title"><a href="#">Latest News Post</a></h3>
@@ -384,7 +383,7 @@
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6">
                         <div class="movie_box">
-                            <div class="movie_img">
+                            <div class="hvr_img">
                                 <a href="#"><img src="img/got.jpg" alt=""></a>
                             </div>
                             <h3 class="movie_title"><a href="#">Latest News Post</a></h3>
@@ -398,7 +397,7 @@
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6">
                         <div class="movie_box">
-                            <div class="movie_img">
+                            <div class="hvr_img">
                                 <a href="#"><img src="img/got.jpg" alt=""></a>
                             </div>
                             <h3 class="movie_title"><a href="#">Latest News Post</a></h3>
@@ -412,7 +411,7 @@
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6">
                         <div class="movie_box">
-                            <div class="movie_img">
+                            <div class="hvr_img">
                                 <a href="#"><img src="img/got.jpg" alt=""></a>
                             </div>
                             <h3 class="movie_title"><a href="#">Latest News Post</a></h3>
@@ -426,7 +425,7 @@
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6">
                         <div class="movie_box">
-                            <div class="movie_img">
+                            <div class="hvr_img">
                                 <a href="#"><img src="img/got.jpg" alt=""></a>
                             </div>
                             <h3 class="movie_title"><a href="#">Latest News Post</a></h3>
@@ -440,7 +439,7 @@
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6">
                         <div class="movie_box">
-                            <div class="movie_img">
+                            <div class="hvr_img">
                                 <a href="#"><img src="img/got.jpg" alt=""></a>
                             </div>
                             <h3 class="movie_title"><a href="#">Latest News Post</a></h3>
@@ -458,7 +457,7 @@
                 <div class="row">
                     <div class="col-lg-3 col-md-3 col-sm-6">
                         <div class="movie_box">
-                            <div class="movie_img">
+                            <div class="hvr_img">
                                 <a href="#"><img src="img/gairlsofthesun.jpg" alt=""></a>
                             </div>
                             <h3 class="movie_title"><a href="#">Latest News Post</a></h3>
@@ -472,7 +471,7 @@
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6">
                         <div class="movie_box">
-                            <div class="movie_img">
+                            <div class="hvr_img">
                                 <a href="#"><img src="img/gairlsofthesun.jpg" alt=""></a>
                             </div>
                             <h3 class="movie_title"><a href="#">Latest News Post</a></h3>
@@ -486,7 +485,7 @@
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6">
                         <div class="movie_box">
-                            <div class="movie_img">
+                            <div class="hvr_img">
                                 <a href="#"><img src="img/gairlsofthesun.jpg" alt=""></a>
                             </div>
                             <h3 class="movie_title"><a href="#">Latest News Post</a></h3>
@@ -500,7 +499,7 @@
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6">
                         <div class="movie_box">
-                            <div class="movie_img">
+                            <div class="hvr_img">
                                 <a href="#"><img src="img/gairlsofthesun.jpg" alt=""></a>
                             </div>
                             <h3 class="movie_title"><a href="#">Latest News Post</a></h3>
@@ -518,7 +517,7 @@
                 <div class="row">
                     <div class="col-lg-3 col-md-3 col-sm-6">
                         <div class="movie_box">
-                            <div class="movie_img">
+                            <div class="hvr_img">
                                 <a href="#"><img src="img/cherry.jpg" alt=""></a>
                             </div>
                             <h3 class="movie_title"><a href="#">Latest News Post</a></h3>
@@ -532,7 +531,7 @@
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6">
                         <div class="movie_box">
-                            <div class="movie_img">
+                            <div class="hvr_img">
                                 <a href="#"><img src="img/cherry.jpg" alt=""></a>
                             </div>
                             <h3 class="movie_title"><a href="#">Latest News Post</a></h3>
@@ -546,7 +545,7 @@
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6">
                         <div class="movie_box">
-                            <div class="movie_img">
+                            <div class="hvr_img">
                                 <a href="#"><img src="img/cherry.jpg" alt=""></a>
                             </div>
                             <h3 class="movie_title"><a href="#">Latest News Post</a></h3>
@@ -560,7 +559,7 @@
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6">
                         <div class="movie_box">
-                            <div class="movie_img">
+                            <div class="hvr_img">
                                 <a href="#"><img src="img/cherry.jpg" alt=""></a>
                             </div>
                             <h3 class="movie_title"><a href="#">Latest News Post</a></h3>
@@ -578,7 +577,7 @@
                 <div class="row">
                     <div class="col-lg-3 col-md-3 col-sm-6">
                         <div class="movie_box">
-                            <div class="movie_img">
+                            <div class="hvr_img">
                                 <a href="#"><img src="img/joker2.jpg" alt=""></a>
                             </div>
                             <h3 class="movie_title"><a href="#">Latest News Post</a></h3>
@@ -592,7 +591,7 @@
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6">
                         <div class="movie_box">
-                            <div class="movie_img">
+                            <div class="hvr_img">
                                 <a href="#"><img src="img/joker2.jpg" alt=""></a>
                             </div>
                             <h3 class="movie_title"><a href="#">Latest News Post</a></h3>
@@ -606,7 +605,7 @@
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6">
                         <div class="movie_box">
-                            <div class="movie_img">
+                            <div class="hvr_img">
                                 <a href="#"><img src="img/joker2.jpg" alt=""></a>
                             </div>
                             <h3 class="movie_title"><a href="#">Latest News Post</a></h3>
@@ -620,7 +619,7 @@
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6">
                         <div class="movie_box">
-                            <div class="movie_img">
+                            <div class="hvr_img">
                                 <a href="#"><img src="img/joker2.jpg" alt=""></a>
                             </div>
                             <h3 class="movie_title"><a href="#">Latest News Post</a></h3>
@@ -638,7 +637,7 @@
                 <div class="row">
                     <div class="col-lg-3 col-md-3 col-sm-6">
                         <div class="movie_box">
-                            <div class="movie_img">
+                            <div class="hvr_img">
                                 <a href="#"><img src="img/hitman.jpg" alt=""></a>
                             </div>
                             <h3 class="movie_title"><a href="#">Latest News Post</a></h3>
@@ -652,7 +651,7 @@
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6">
                         <div class="movie_box">
-                            <div class="movie_img">
+                            <div class="hvr_img">
                                 <a href="#"><img src="img/hitman.jpg" alt=""></a>
                             </div>
                             <h3 class="movie_title"><a href="#">Latest News Post</a></h3>
@@ -666,7 +665,7 @@
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6">
                         <div class="movie_box">
-                            <div class="movie_img">
+                            <div class="hvr_img">
                                 <a href="#"><img src="img/hitman.jpg" alt=""></a>
                             </div>
                             <h3 class="movie_title"><a href="#">Latest News Post</a></h3>
@@ -680,7 +679,7 @@
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6">
                         <div class="movie_box">
-                            <div class="movie_img">
+                            <div class="hvr_img">
                                 <a href="#"><img src="img/hitman.jpg" alt=""></a>
                             </div>
                             <h3 class="movie_title"><a href="#">Latest News Post</a></h3>
@@ -698,7 +697,7 @@
                 <div class="row">
                     <div class="col-lg-3 col-md-3 col-sm-6">
                         <div class="movie_box">
-                            <div class="movie_img">
+                            <div class="hvr_img">
                                 <a href="#"><img src="img/icarealot.jpg" alt=""></a>
                             </div>
                             <h3 class="movie_title"><a href="#">Latest News Post</a></h3>
@@ -712,7 +711,7 @@
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6">
                         <div class="movie_box">
-                            <div class="movie_img">
+                            <div class="hvr_img">
                                 <a href="#"><img src="img/icarealot.jpg" alt=""></a>
                             </div>
                             <h3 class="movie_title"><a href="#">Latest News Post</a></h3>
@@ -726,7 +725,7 @@
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6">
                         <div class="movie_box">
-                            <div class="movie_img">
+                            <div class="hvr_img">
                                 <a href="#"><img src="img/icarealot.jpg" alt=""></a>
                             </div>
                             <h3 class="movie_title"><a href="#">Latest News Post</a></h3>
@@ -740,7 +739,7 @@
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6">
                         <div class="movie_box">
-                            <div class="movie_img">
+                            <div class="hvr_img">
                                 <a href="#"><img src="img/icarealot.jpg" alt=""></a>
                             </div>
                             <h3 class="movie_title"><a href="#">Latest News Post</a></h3>
@@ -909,12 +908,12 @@
                         <span>دسته بندی :&nbsp;<a href="#">فیلم</a></span>
                     </div>
                     <div class="row">
-                        <div class="col-lg-6 col-md-12 col-sm-12">
-                            <div class="news_img">
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <div class="hvr_img">
                                 <img src="img/todd-phillips-joker.jpg" alt="">
                             </div>
                         </div>
-                        <div class="col-lg-6 col-md-12 col-sm-12">
+                        <div class="col-lg-6 col-md-6 col-sm-12">
                             <div class="news_contact">
                                 <p>
                                     لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
@@ -1020,20 +1019,6 @@
         </div>
     </footer>
     <!-- end footer -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <script src="js/jqyry.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/choices.js"></script>
@@ -1054,8 +1039,8 @@
         var swiper = new Swiper(".mySwiper", {
             loop: true,
             autoplay: {
-                delay: 2500,
-                disableOnInteraction: false,
+                delay: 5000,
+                disableOnInteraction: true,
             },
             pagination: {
                 el: ".swiper-pagination",
@@ -1067,6 +1052,31 @@
         });
         // end swiper
         //start advansed search 
+        let showFilters = false;
+        if (showFilters) {
+            document.getElementById("FiltersBox ").style.display = "grid ";
+        } else {
+            document.getElementById("FiltersBox ").style.display = "none ";
+        }
+
+        function toggleFilters() {
+            showFilters = !showFilters;
+            if (showFilters) {
+                document.getElementById("FiltersBox ").style.display = "grid ";
+            } else {
+                document.getElementById("FiltersBox ").style.display = "none ";
+            }
+        }
+
+        function getResults() {
+            $.ajax({
+                url: "https://reqres.in/api/users ",
+                type: "GET ",
+                success: function(response) {
+                    console.log(response);
+                }
+            });
+        }
         const customSelects = document.querySelectorAll("select");
         const deleteBtn = document.getElementById('delete')
         const choices = new Choices('select', {
