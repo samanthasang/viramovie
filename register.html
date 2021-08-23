@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>v_regester</title>
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.rtl.min.css">
+    <link href="img/TV.svg" rel="icon">
+    <link href="img/TV.svg" rel="apple-touch-icon">
+</head>
+
+<body>
+    <div class="main">
+        <div class="register-image">
+            <img src="img/tanos.png" alt="sing up image">
+        </div>
+        <div class="register-form">
+            <div class="nav top_nav" id="v-pills-tab-2" role="tablist" aria-orientation="vertical">
+                <div class="form_btn active" data-bs-toggle="pill" data-bs-target="#login" role="tab" aria-selected="true">
+                    ورود
+                </div>
+                <div class="form_btn" data-bs-toggle="pill" data-bs-target="#signup" role="tab" aria-selected="false">
+                    ثبت نام
+                </div>
+            </div>
+            <div class="tab-content form_body" id="v-pills-tabContent-2">
+                <div class="tab-pane fade show active" id="login" role="tabpanel">
+                    <form method="POST" id="contactForm" name="contactForm" class="contactForm row">
+                        <div class="cmnt_box">
+                            <div class="user-box">
+                                <input type="text" class="input" id="user_name" autocomplete="off" required>
+                                <label>نام کاربری</label>
+                            </div>
+                        </div>
+                        <div class="cmnt_box">
+                            <div class="user-box">
+                                <input type="password" class="input" id="user_pass" autocomplete="off" required>
+                                <label>رمز عبور</label>
+                            </div>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">مرا به خاطر بسپار!</label>
+                        </div>
+                        <div class="col-12">
+                            <a href="#" class="btn btn_orange fl">ورود</a>
+                        </div>
+                        <p><a href="#">رمز خود را فراموش کردید؟</a></p>
+                    </form>
+                </div>
+                <div class="tab-pane fade" id="signup" role="tabpanel">
+                    <form method="POST" id="contactForm" name="contactForm" class="contactForm row">
+                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 cmnt_box">
+                            <div class="user-box">
+                                <input type="email" class="input" id="user_email" autocomplete="off" required>
+                                <label>ایمیل</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 cmnt_box">
+                            <div class="user-box">
+                                <input type="text" class="input" id="user_name" autocomplete="off" required>
+                                <label>نام کاربری</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 cmnt_box">
+                            <div class="user-box">
+                                <input type="password" class="input" id="user_pass" autocomplete="off" required>
+                                <label>رمز عبور</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 cmnt_box">
+                            <div class="user-box">
+                                <input type="password" class="input" id="confirm_user_pass" autocomplete="off" required>
+                                <label>تکرار رمز عبور</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <a href="#" class="btn btn_orange fl">ثبت نام</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jqyry.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

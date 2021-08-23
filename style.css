@@ -287,8 +287,7 @@ sup {
     direction: ltr !important;
 }
 
-button:focus {
-    border: none !important;
+*:focus {
     box-shadow: none !important
 }
 
@@ -375,6 +374,7 @@ button:focus {
     color: #fff !important;
     background-color: #eb7308 !important;
     border-color: #eb7308 !important;
+    margin: 5px;
 }
 
 .btn_orange:hover {
@@ -414,6 +414,27 @@ button:focus {
 .btn_tab.active {
     background: #242424;
     color: #e1e1e1 !important;
+}
+
+.btn-group {
+    background: #e1e1e1;
+    margin-bottom: 40px !important;
+    border-radius: 10px;
+}
+
+.btn-group button {
+    border-radius: 10px !important;
+}
+
+.btn-group button:active,
+.btn-group button:hover {
+    background: #eb7308;
+    color: #e1e1e1;
+}
+
+.btn-group button.active {
+    background: #eb7308;
+    color: #e1e1e1;
 }
 
 
@@ -458,7 +479,7 @@ button:focus {
 =           TOGGLE SWITCH       =
 ===============================*/
 
-input[type="checkbox"] {
+input[name="toggler"] {
     margin: 10px;
     position: relative;
     width: 60px;
@@ -467,16 +488,16 @@ input[type="checkbox"] {
     background: linear-gradient(0deg, #333, #000);
     outline: none;
     border-radius: 20px;
-    box-shadow: 0 0 0 4px #353535, 0 0 0 5px #3e3e3e, inset 0 0 10px rgba(0, 0, 0, 1);
+    box-shadow: 0 0 0 4px #353535, 0 0 0 5px #3e3e3e, inset 0 0 10px rgba(0, 0, 0, 1) !important;
     cursor: pointer;
 }
 
-input:checked[type="checkbox"] {
-    background: linear-gradient(0deg, #e67e22, #f39c12);
-    box-shadow: 0 0 0 4px #353535, 0 0 0 5px #3e3e3e, inset 0 0 10px rgba(0, 0, 0, 1);
+input:checked[name="toggler"] {
+    background: linear-gradient(0deg, #eb7308, #7a3d06);
+    box-shadow: 0 0 0 4px #353535, 0 0 0 5px #3e3e3e, inset 0 0 10px rgba(0, 0, 0, 1) !important;
 }
 
-input[type="checkbox"]:before {
+input[name="toggler"]:before {
     content: '';
     position: absolute;
     top: 0;
@@ -490,11 +511,11 @@ input[type="checkbox"]:before {
     transition: .5s;
 }
 
-input:checked[type="checkbox"]:before {
+input:checked[name="toggler"]:before {
     left: 30px;
 }
 
-input[type="checkbox"]:after {
+input[name="toggler"]:after {
     content: '';
     position: absolute;
     top: calc(50% - 2px);
@@ -506,7 +527,7 @@ input[type="checkbox"]:after {
     transition: .5s;
 }
 
-input:checked[type="checkbox"]:after {
+input:checked[name="toggler"]:after {
     left: 50px;
 }
 
@@ -840,13 +861,16 @@ input:checked[type="checkbox"]:after {
     margin: 30px 0 !important;
 }
 
+.trailer_box,
 .movie_box {
     background: #242424;
     border-radius: 10px;
     padding: 15px;
     margin-bottom: 20px;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.6);
 }
 
+.trailer_title,
 .movie_title {
     font-size: 17px;
     font-weight: 600;
@@ -855,6 +879,7 @@ input:checked[type="checkbox"]:after {
     text-align: center;
 }
 
+.trailer_title a,
 .movie_title a {
     display: inline-block;
     color: #e1e1e1;
@@ -862,6 +887,7 @@ input:checked[type="checkbox"]:after {
     margin-bottom: 10px;
 }
 
+.trailer_title a:hover,
 .movie_title a:hover {
     color: #eb7308;
     text-decoration: none;
@@ -890,6 +916,11 @@ input:checked[type="checkbox"]:after {
     bottom: 10px;
     left: 10px;
     right: 10px;
+}
+
+.trailer_bar {
+    display: flex;
+    justify-content: center;
 }
 
 .movie_division button {
@@ -1382,8 +1413,15 @@ input:checked[type="checkbox"]:after {
     margin: 0;
 }
 
-.panel .panel-body .table tr td {
+.panel .panel-body .table tr td,
+.panel .panel-body .table tr th {
     border-color: #eb7308;
+    text-align: center;
+}
+
+.panel .panel-body .table tr th:first-child,
+.panel .panel-body .table tr td:first-child {
+    text-align: right;
 }
 
 .panel .panel-body .table thead tr.active th {
@@ -1538,12 +1576,399 @@ input:checked[type="checkbox"]:after {
 }
 
 .reply small {
-    color: #b7b4b4
+    color: #e1e1e1
 }
 
 .reply small:hover {
-    color: #eb7308;
+    color: var(--bs-primary);
     cursor: pointer
+}
+
+
+/*===============================
+=          filmArshive          =
+===============================*/
+
+
+/*===============================
+=           pagination          =
+===============================*/
+
+.pagination-outer {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.pagination {
+    font-family: 'Kodchasan', sans-serif;
+    border-radius: 40px;
+    border: 2px solid #eb7308;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.pagination li a.page-link {
+    color: #fff;
+    background-color: transparent;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 43px;
+    height: 45px;
+    width: 55px;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.pagination li.active a.page-link,
+.pagination li a.page-link:hover,
+.pagination li.active a.page-link:hover {
+    color: #fff;
+    background: transparent;
+    border: none;
+}
+
+.pagination li a.page-link:before,
+.pagination li a.page-link:after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    border: 1px solid #000;
+    border-top: none;
+    border-bottom: none;
+    transform: skewX(-16deg);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transition: all 0.3s;
+}
+
+.pagination li a.page-link:after {
+    background-color: #eb7308;
+    border: none;
+    border-radius: 50%;
+    transform: skewX(-16deg) scale(0);
+}
+
+.pagination li.active a.page-link:after,
+.pagination li a.page-link:hover:after,
+.pagination li.active a.page-link:hover:after {
+    border-radius: 0;
+    transform: skewX(-16deg) scale(1);
+}
+
+.pagination li:first-child a.page-link:before,
+.pagination li:last-child a.page-link:before {
+    display: none;
+}
+
+.pagination li:first-child a.page-link:after {
+    left: -1px;
+}
+
+.pagination li:last-child a.page-link:after {
+    left: auto;
+    right: -1px;
+}
+
+
+/*===============================
+=        regester page          =
+===============================*/
+
+.main {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+.register-form {
+    background: #242424b0;
+    width: 400px;
+    height: 350px;
+    padding: 20px;
+    border-radius: 10px;
+    color: #e1e1e1;
+    position: absolute;
+    top: 150px;
+    left: 150px;
+}
+
+.top_nav {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.form_body {
+    display: flex;
+    justify-content: center;
+}
+
+.form_body {
+    border-top: 1px solid #eb7308;
+}
+
+.form_body form {
+    margin-top: 30px;
+}
+
+.form_btn {
+    display: flex;
+    align-items: center;
+    border: 2px solid transparent;
+    color: #e1e1e1;
+    padding: 10px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.form_btn:hover,
+.form_btn:focus,
+.form_btn:active,
+.form_btn.active {
+    background: #242424;
+    border-bottom: 2px solid #eb7308;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.form-check {
+    padding-right: 12px !important;
+}
+
+.form-check .form-check-input {
+    margin-right: 0px !important;
+    margin-left: 5px !important;
+}
+
+.register-image {
+    position: absolute;
+    right: 0;
+    top: 10px;
+}
+
+.register-image img {
+    width: 70%;
+}
+
+
+/*===============================
+=         video trailer         =
+===============================*/
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.video {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.playpause svg {
+    width: 30%;
+    height: 30%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background-size: contain;
+    background-position: center;
+    cursor: pointer;
+    transition: 0.8 ease-in-out;
+}
+
+.playpause svg:hover {
+    width: 35%;
+    height: 35%;
+}
+
+
+/*===============================
+=             panel             =
+===============================*/
+
+.vet_panel {
+    background: #242424;
+    margin: 40px 0 !important;
+    border-radius: 10px;
+}
+
+
+/*===============================
+=          aside panel          =
+===============================*/
+
+.aside_panel {
+    background: #eb7308;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 10px;
+    padding-bottom: 20px;
+}
+
+.main_panel {
+    background: #242424;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.tab-pane {
+    color: #e1e1e1 !important;
+}
+
+.user_content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 10px 0;
+    padding: 10px !important;
+    background: #242424;
+    border-radius: 100px 10px 10px 10px;
+    color: #e1e1e1;
+}
+
+.user_content img {
+    width: 60px;
+    margin: 5px;
+    border-radius: 50%;
+}
+
+.user_info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.uid {
+    font-size: 10px;
+    color: #eb7308;
+}
+
+.uid:hover {
+    color: #eb7308;
+    letter-spacing: 1px;
+}
+
+.list_panel {
+    display: flex;
+    flex-direction: column;
+    margin-right: 15px;
+}
+
+.list_panel button {
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    padding: 20px 10px;
+    margin-bottom: 1px;
+}
+
+.list_panel button:hover,
+.list_panel button:active,
+.list_panel button:focus,
+button .active {
+    background: #242424;
+    color: #e1e1e1;
+}
+
+
+/*===============================
+=           main panel          =
+===============================*/
+
+.main_panel {
+    padding: 40px !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/*===============================
+=       Subscription_status     =
+===============================*/
+
+.Available_sub {
+    background: #e1e1e1;
+    color: #141414;
+    padding: 30px;
+    margin-bottom: 40px;
+    min-height: 250px;
+    min-width: 500px;
+    border-radius: 10px;
+}
+
+.Current {
+    background: #198754;
+    color: #e1e1e1;
+}
+
+.Square {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    padding: 20px;
+    background: #eb7308;
+    color: #141414;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.Square span:nth-child(3) {
+    font-size: 12px !important;
+    color: var(--bs-light);
+}
+
+.sub_facilities {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sub_facilities ul li {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/*===============================
+=          last_comments        =
+===============================*/
+
+.my_cmnt {
+    background: #eb7308;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 40px;
+}
+
+
+/*===============================
+=          Watch list           =
+===============================*/
+
+.Watch_list {
+    background: #141414;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 40px;
 }
 
 
@@ -1555,7 +1980,28 @@ input:checked[type="checkbox"]:after {
 
 @media (min-width: 350px) and (max-width: 375px) {}
 
-@media (min-width: 375px) and (max-width: 400px) {}
+@media only screen and (max-width: 480px) {
+    .pagination {
+        padding: 10px 0;
+        margin: 0;
+        display: block;
+    }
+    .pagination li {
+        display: inline-block;
+    }
+    .pagination li a.page-link:before {
+        display: none;
+    }
+    .pagination li a.page-link:after {
+        transform: skew(0) scale(0);
+    }
+    .pagination li.active a.page-link:hover:after,
+    .pagination li.active a.page-link:after,
+    .pagination li a.page-link:hover:after {
+        border-radius: 20px;
+        transform: skew(0) scale(1);
+    }
+}
 
 @media (min-width: 400px) and (max-width: 536px) {}
 
@@ -1598,7 +2044,27 @@ input:checked[type="checkbox"]:after {
     }
 }
 
-@media (max-width: 535px) {}
+@media (max-width: 575px) {
+    .actor_name {
+        position: relative;
+        bottom: 5px;
+    }
+    .hvr_img {
+        margin-bottom: 10px;
+    }
+    .user_content {
+        flex-direction: row !important;
+        justify-content: center;
+    }
+    .list_panel {
+        padding: 0 20px !important;
+    }
+    .list_panel button {
+        border-radius: 50px;
+        text-align: center !important;
+        font-weight: 600;
+    }
+}
 
 @media (max-width: 600px) {}
 
@@ -1638,12 +2104,35 @@ input:checked[type="checkbox"]:after {
     .dl_atr li {
         height: 40px !important;
     }
+    .register-form {
+        position: absolute;
+        left: 30px !important;
+    }
+    .user_content {
+        padding: 20px 0 !important;
+    }
+    .list_panel button {
+        font-size: 12px !important;
+    }
+    .list_panel svg {
+        display: none;
+    }
 }
 
 
 /* md */
 
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+    .register-image {
+        position: absolute;
+        right: 30px;
+        top: 0;
+    }
+    .actor_name {
+        position: relative;
+        bottom: 20px;
+    }
+}
 
 @media (max-width: 992px) {
     .latest_trailers {
@@ -1670,6 +2159,18 @@ input:checked[type="checkbox"]:after {
     }
     .dl_atr li {
         height: 50px;
+    }
+    .aside_panel {
+        padding-left: 0 !important;
+    }
+    .user_content {
+        flex-direction: column;
+        margin-left: 10px;
+    }
+    .list_panel {
+        width: 100%;
+        padding: 0;
+        margin: 0;
     }
 }
 
