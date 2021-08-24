@@ -30,7 +30,7 @@
 =           CSS RESET           =
 ===============================*/
 
-:root {
+ :root {
     --bs-blue: #0d6efd;
     --bs-indigo: #6610f2;
     --bs-purple: #6f42c1;
@@ -435,6 +435,11 @@ sup {
 .btn-group button.active {
     background: #eb7308;
     color: #e1e1e1;
+}
+
+.btn_icon {
+    background: var(--bs-red) !important;
+    padding: 2px !important;
 }
 
 
@@ -1851,16 +1856,15 @@ input:checked[name="toggler"]:after {
 .user_info {
     display: flex;
     flex-direction: column;
-    margin-top: 10px;
 }
 
 .uid {
     font-size: 10px;
-    color: #eb7308;
+    color: #e1e1e1;
 }
 
 .uid:hover {
-    color: #eb7308;
+    color: #e1e1e1;
     letter-spacing: 1px;
 }
 
@@ -1903,8 +1907,9 @@ button .active {
 ===============================*/
 
 .Available_sub {
-    background: #e1e1e1;
-    color: #141414;
+    background: #242424;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.6);
+    color: #e1e1e1;
     padding: 30px;
     margin-bottom: 40px;
     min-height: 250px;
@@ -1914,7 +1919,6 @@ button .active {
 
 .Current {
     background: #198754;
-    color: #e1e1e1;
 }
 
 .Square {
@@ -1953,7 +1957,8 @@ button .active {
 ===============================*/
 
 .my_cmnt {
-    background: #eb7308;
+    background: #242424;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.6);
     border-radius: 10px;
     padding: 10px;
     margin-bottom: 40px;
@@ -1965,10 +1970,125 @@ button .active {
 ===============================*/
 
 .Watch_list {
-    background: #141414;
+    background: #242424;
     border-radius: 10px;
     padding: 10px;
     margin-bottom: 40px;
+}
+
+
+/*===============================
+=          notifica             =
+===============================*/
+
+.notifica {
+    background: #242424;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.6);
+}
+
+
+/*===============================
+=          Favorites            =
+===============================*/
+
+.Favorites {
+    background: #242424;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.6);
+}
+
+
+/*===============================
+=          requests            =
+===============================*/
+
+.requests {
+    background: #242424;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.6);
+}
+
+
+/*===============================
+=          requests            =
+===============================*/
+
+.User_reviews {
+    background: #242424;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.6);
+    margin-bottom: 40px;
+}
+
+.cmnt_title {
+    margin-bottom: 20px;
+    padding: 10px 0;
+    border-bottom: 1px solid;
+}
+
+
+/*===============================
+=          Edit_account         =
+===============================*/
+
+.edit_photo {
+    position: relative;
+    top: 50px;
+    margin: auto;
+    background: #eb7308 !important;
+}
+
+.adit_account {
+    padding: 40px !important;
+}
+
+.edit_photo,
+.adit_account {
+    background: #242424;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.6);
+}
+
+.choos_file {
+    position: relative;
+    top: -15px;
+    right: 0;
+    cursor: pointer;
+    background: #eb7308;
+    padding: 2px;
+    border-radius: 10px;
+}
+
+.choos_file input {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+
+/*===============================
+=          exit_account         =
+===============================*/
+
+.exit_account {
+    background: #242424;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+    background: transparent !important;
 }
 
 
